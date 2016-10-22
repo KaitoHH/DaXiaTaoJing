@@ -26,7 +26,7 @@
 
                 <p>This is the description of his/her problem</p>
                 <p><strong>reward: 1 rmb</strong><p>
-                <a class="btn btn-info" href="#">View</a> <a class="btn btn-primary" href="#">Answer</a>
+                <a class="btn btn-info" href="private_view.jsp">View</a> <a class="btn btn-primary" href="#">Answer</a>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
 
                 <p>This is the description of his/her problem</p>
                 <p><strong>reward: 1 rmb</strong><p>
-                <a class="btn btn-info" href="#">View</a> <a class="btn btn-primary" href="#">Answer</a>
+                <a class="btn btn-info" href="private_view.jsp">View</a> <a class="btn btn-primary" href="#">Answer</a>
             </div>
         </div>
     </div>
@@ -58,8 +58,8 @@
                 <h4><strong>XXX</strong> looks for help!</h4>
 
                 <p>This is the description of his/her problem</p>
-                <p>pay <strong>1 rmb</strong> to read the answer<p>
-                <a class="btn btn-danger" href="#">Pay and view</a>
+                <p>pay <strong>1 rmb</strong> to read the answer<br/>(The answer is offered by <strong>Mr. XXX)</strong></p>
+                <a class="btn btn-danger" href="private_peek.jsp">Pay and view</a>
             </div>
         </div>
     </div>
@@ -71,8 +71,21 @@
                 <h4><strong>XXX</strong> looks for help!</h4>
 
                 <p>This is the description of his/her problem</p>
-                <p>pay <strong>1 rmb</strong> to read the answer<p>
-                <a class="btn btn-danger" href="#">Pay and view</a>
+                <p>pay <strong>1 rmb</strong> to read the answer<br/>(The answer is offered by <strong>Mr. XXX)</strong></p>
+                <a class="btn btn-danger" href="private_peek.jsp">Pay and view</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="page-header">
+                <h1>WANT TO POST YOUR PROBLEM?</h1>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <p>
+                    You can post your own problem here and pay for the answer offerer.
+                    <a href="private_postquestion.jsp" class="btn-link"> >>click here to post your own problem </a>
+                </p>
             </div>
         </div>
     </div>
