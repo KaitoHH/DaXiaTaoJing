@@ -3,6 +3,11 @@
 <head>
     <%@include file="frameJsp/header.jsp" %>
     <title>大夏淘经</title>
+    <style type="text/css">
+        body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
+            font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        }
+    </style>
 </head>
 <body>
 
@@ -11,40 +16,36 @@
 
 <div class="container">
 
-    <div class="page-header">
-        <div class="row">
-            <div class="col-lg-8 col-md-7 col-sm-6">
-                <h1>Problem title<br/><small>Author: Mr. blablabla</small></h1>
-            </div>
-        </div>
-    </div>
     <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-            <p>
-                While my first part enables me to use factorial and power, so i create some function prototypes and use recursive function to get the error function as follow: <br/>
-
-                double erf(double x, int N)<br/>
-                {<br/>
-                if (N < 0) return 0;<br/>
-
-                return 1.128379167*(power(-1,N)*power(x,2*N+1))/((2*N+1)*fact(N))+erf(x, N-1);<br/>
-                }<br/>
-                The problem is that the second part needs me to use Horner's Rule while a1,a2,a3....a(n) include factorial function. So what should I do to change the factorial function into something else, so I could using recursive function to calculate erf without using factorial.<br/>
-            </p>
-            <p> <img alt="no pic" src="imgs/image-1.png"> </p>
-            <div class="page-header">
-                <h1>Answer <small>(offered by <em>Mr. XXX</em>)</small></h1>
-                <p>
-                    While my first part enables me to use factorial and power, so i create some function prototypes and use recursive function to get the error function as follow: <br/>
-
-                    double erf(double x, int N)<br/>
-                    {<br/>
-                    if (N < 0) return 0;<br/>
-
-                    return 1.128379167*(power(-1,N)*power(x,2*N+1))/((2*N+1)*fact(N))+erf(x, N-1);<br/>
-                    }<br/>
-                    The problem is that the second part needs me to use Horner's Rule while a1,a2,a3....a(n) include factorial function. So what should I do to change the factorial function into something else, so I could using recursive function to calculate erf without using factorial.<br/>
-                </p>
+        <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="page-header">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <h1>数字逻辑怎么学？<br/><small>提问者: 米老鼠</small></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        数字逻辑整体的结构是什么？<br/>
+                        感觉学的很模糊。<br/>
+                    </p>
+                    <p> <img alt="no pic" src="imgs/image-1.png"> </p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="page-header">
+                        <h1>回答 <small>(由 <em>泥老鼠</em> 提供)</small></h1>
+                    </div>
+                    <p>
+                        这是一个好问题。<br/>
+                        数字逻辑怎么学呢？<br/>
+                        认真学。<br/>
+                    </p>
+                    <p> <img alt="no pic" src="imgs/image-1.png"> </p>
+                </div>
             </div>
         </div>
     </div>

@@ -3,6 +3,11 @@
 <head>
     <%@include file="frameJsp/header.jsp" %>
     <title>大夏淘经</title>
+    <style type="text/css">
+        body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
+            font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        }
+    </style>
 </head>
 <body>
 
@@ -11,54 +16,45 @@
 
 <div class="container">
 
-    <div class="page-header">
-        <div class="row">
-            <div class="col-lg-8 col-md-7 col-sm-6">
-                <h1>Problem title<br/><small>Author: Mr. blablabla</small></h1>
-            </div>
-        </div>
-    </div>
     <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-            <p>
-                While my first part enables me to use factorial and power, so i create some function prototypes and use recursive function to get the error function as follow: <br/>
-
-                double erf(double x, int N)<br/>
-                {<br/>
-                if (N < 0) return 0;<br/>
-
-                return 1.128379167*(power(-1,N)*power(x,2*N+1))/((2*N+1)*fact(N))+erf(x, N-1);<br/>
-                }<br/>
-                The problem is that the second part needs me to use Horner's Rule while a1,a2,a3....a(n) include factorial function. So what should I do to change the factorial function into something else, so I could using recursive function to calculate erf without using factorial.<br/>
-            </p>
-            <p> <img alt="no pic" src="imgs/image-1.png"> </p>
-        </div>
-        <div class="page-header">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <h3>Reward</h3>
+        <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="page-header">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <h1>数字逻辑怎么学？<br/><small>提问者: 米老鼠</small></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        数字逻辑整体的结构是什么？<br/>
+                        感觉学的很模糊。<br/>
+                    </p>
+                    <p> <img alt="no pic" src="imgs/image-1.png"> </p>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-8 col-md-8 col-sm-8">
-            <p>The author will pay you <span class="text-danger">2 rmb</span> for your answer.</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>悬赏</h3>
+                    <p>提问者将为这个回答支付您 <span class="text-danger">2 元</span>。</p>
+                </div>
+            </div>
             <div class="page-header">
-                <h3>Edit your answer</h3>
+                <h1>贡献您的回答吧！</h1>
             </div>
             <div role="form" class="form-horizonal">
-                <textarea rows="20" class="form-control"></textarea>
+                <textarea rows="12" class="form-control"></textarea>
                 <p>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <input type="submit" class="form-control btn btn-success" value="Submit your answer">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <input type="submit" class="form-control btn btn-success" value="上传回答">
                 </div>
                 </p>
             </div>
         </div>
     </div>
     <%@include file="frameJsp/footer.jsp" %>
+
 </div>
 
 
