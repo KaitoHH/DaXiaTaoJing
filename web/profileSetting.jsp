@@ -3,7 +3,7 @@
 <head>
     <%@include file="frameJsp/header.jsp" %>
     <title>大夏淘经</title>
-    <link href="css/profile.css" rel="stylesheet"/>
+    <link href="/css/profile.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -11,77 +11,21 @@
 
 
 <div class="container">
-    <div class="bs-docs-section">
-        <div class="row profile panel">
-            <div class="col-md-4 bg_blur ">
-                <a href="#" class="follow_btn hidden-xs btn btn-primary btn-lg">Follow</a>
-            </div>
-            <div class="col-md-8  col-xs-12 info-col">
-                <img src="http://lorempixel.com/180/180/people/6/" class="img-rounded picture hidden-xs">
-                <img src="http://lorempixel.com/180/180/people/6/" class="img-rounded visible-xs picture_mob">
-                <div class="header">
-                    <h2>机智汇</h2>
-                    <h4>软件工程</h4>
-                    <span>为什么，我如此地，机智。</span>
-                </div>
-
-                <div class="btn-group btn-block">
-                    <button class="btn btn-inverse btn-lg">提问 16</button>
-                    <button class="btn btn-inverse btn-lg">回答 14</button>
-                    <button class="btn btn-inverse btn-lg">关注 14</button>
-                    <button class="btn btn-inverse btn-lg">粉丝 14</button>
-                </div>
-            </div>
-
+    <%@include file="frameJsp/profile/profilePanel.jsp" %>
+    <%--从此位置开始写代码--%>
+    <ul class="breadcrumb">
+        <li><a href="/user">个人中心</a></li>
+        <li class="active">账户设置</li>
+    </ul>
+    <div class="row">
+        <div class="col-md-2 col-xs-3" style="text-align: center">资料完成度:</div>
+        <div class="progress progress-striped active">
+            <div class="progress-bar" style="width: 45%">45%</div>
         </div>
     </div>
-    <%--从此位置开始写代码--%>
-
     <div class="row">
         <div class="col-lg-6">
 
-            <div class="col-lg-2">
-                完善度
-            </div>
-            <div class="col-lg-10">
-                <div class="progress progress-striped">
-                    <div class="progress-bar progress-bar-info" style="width: 20%">20%</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-lg-offset-1">
-            <div class="col-lg-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <a class="item" href="concern.jsp#concern">
-                            <span class="zg-gray-normal">关注了</span><br>
-                            <strong>3</strong><label> 人</label>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <a class="item" href="concern.jsp#concerned">
-                            <span class="zg-gray-normal">关注者</span><br>
-                            <strong>3</strong><label> 人</label>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="page-header">
-                    <a href="lately.jsp">亲爱的阿基米德</a>
-                    » 编辑个人资料
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6">
             <div class="well bs-component">
                 <form class="form-horizontal">
                     <fieldset>
@@ -101,7 +45,8 @@
                                     <form target="av_up_frame" style="display:none;" method="post"
                                           enctype="multipart/form-data"
                                           action="https://upload.zhihu.com:/upload_avatar"><label
-                                            for="avt_file"></label><input accept="image/*" name="picture" id="avt_file"
+                                            for="avt_file"></label><input accept="image/*" name="picture"
+                                                                          id="avt_file"
                                                                           type="file"><input name="handle_mode"
                                                                                              value="upload"
                                                                                              type="hidden"><input
@@ -131,7 +76,8 @@
                                 <label for="inputSentence introduction" class="col-lg-2 control-label">一句话介绍</label>
 
                                 <div class="col-lg-10">
-                                    <input class="form-control" id="inputSentence introduction" placeholder="programmer"
+                                    <input class="form-control" id="inputSentence introduction"
+                                           placeholder="programmer"
                                            type="text">
                                 </div>
                             </div>
@@ -201,6 +147,7 @@
                 </form>
             </div>
         </div>
+
         <div class="col-lg-4 col-lg-offset-1">
 
 
@@ -211,39 +158,6 @@
                     </div>
                 </div>
             </div>
-
-
-            <%--
-                <div class="zm-profile-side-topics" id="zh-profile-following-topic">
-
-                <a class="link" data-hovercard="t$b$19874223" href="/topic/19874223">
-                    <img class="Avatar Avatar--l" src="https://pic2.zhimg.com/90f9d7cc0738b74705aabe09fc508d25_l.png" srcset="https://pic2.zhimg.com/90f9d7cc0738b74705aabe09fc508d25_xl.png 2x" alt="河圖（歌手）">
-                </a>
-
-                <a class="link" data-hovercard="t$b$19580599" href="/topic/19580599">
-                    <img class="Avatar Avatar--l" src="https://pic1.zhimg.com/v2-61dd74b092312825e80f1de6f686a138_l.jpg" srcset="https://pic1.zhimg.com/v2-61dd74b092312825e80f1de6f686a138_xl.jpg 2x" alt="抑郁">
-                </a>
-
-                <a class="link" data-hovercard="t$b$19579921" href="/topic/19579921">
-                    <img class="Avatar Avatar--l" src="https://pic2.zhimg.com/5b7867f95e8395fe03db954b70394629_l.png" srcset="https://pic2.zhimg.com/5b7867f95e8395fe03db954b70394629_xl.png 2x" alt="女追男">
-                </a>
-
-                <a class="link" data-hovercard="t$b$19583225" href="/topic/19583225">
-                    <img class="Avatar Avatar--l" src="https://pic2.zhimg.com/f35c989d9_l.jpg" srcset="https://pic2.zhimg.com/f35c989d9_xl.jpg 2x" alt="初恋">
-                </a>
-
-                <a class="link" data-hovercard="t$t$19554945" href="/topic/19554945">
-                    <img class="Avatar Avatar--l" src="https://pic4.zhimg.com/acca8921f_l.jpg" srcset="https://pic4.zhimg.com/acca8921f_xl.jpg 2x" alt="心理">
-                </a>
-
-                <a class="link" data-hovercard="t$b$19568143" href="/topic/19568143">
-                    <img class="Avatar Avatar--l" src="https://pic3.zhimg.com/21d3703b08d5a57566ac67e3b728b01e_l.png" srcset="https://pic3.zhimg.com/21d3703b08d5a57566ac67e3b728b01e_xl.png 2x" alt="心理健康">
-                </a>
-
-                <a class="link" data-hovercard="t$b$19567962" href="/topic/19567962">
-                    <img class="Avatar Avatar--l" src="https://pic3.zhimg.com/43efd061747369b1f03cc2c34adca45e_l.jpg" srcset="https://pic3.zhimg.com/43efd061747369b1f03cc2c34adca45e_xl.jpg 2x" alt="博弈论">
-                </a>--%>
-
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="zm-side-section-inner">

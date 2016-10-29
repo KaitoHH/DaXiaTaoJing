@@ -34,8 +34,8 @@
                         </li>
                         <li class="divider"></li>
                         <li><a href="#">我的消息</a></li>
-                        <li><a href="#">我的资料</a></li>
-                        <li><a href="#">最近动态</a></li>
+                        <li><a href="/user">个人中心</a></li>
+                        <li><a href="/user/setting">设置</a></li>
                         <li class="divider"></li>
                         <li><a href="#">我的关注</a></li>
                         <li><a href="#">我的问题</a></li>

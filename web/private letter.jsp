@@ -82,7 +82,7 @@
         <div class="col-lg-4">
             <div class="alert alert-dismissible alert-success">
                 <button type="button" class="close" data-dismiss="alert">×</button>
-                担心骚扰？可以 <a href="letter.jsp#box" class="alert-link">设置</a>为「开启陌生人私信箱」。
+                担心骚扰？可以 <a href="profileSetting.jsp#box" class="alert-link">设置</a>为「开启陌生人私信箱」。
             </div>
         </div>
                 </div>

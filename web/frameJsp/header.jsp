@@ -7,17 +7,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <%--css元素--%>
-<link rel="stylesheet" href="css/bootstrap.css" media="screen">
-<link rel="stylesheet" href="skins/eden.css" media="screen">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/animate.css" rel="stylesheet">
-<link href="css/global.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/bootstrap.css" media="screen">
+<link rel="stylesheet" href="/skins/eden.css" media="screen">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/animate.css" rel="stylesheet">
+<link href="/css/global.css" rel="stylesheet">
 
 <%--js元素--%>
-<script src="js/jQuery/jquery-2.1.3.min.js"></script>
+<script src="/js/jQuery/jquery-2.1.3.min.js"></script>
 <script src="http://malsup.github.io/jquery.form.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/login.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/login.js"></script>
 
 <%--navbar--%>
 <script>

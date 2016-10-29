@@ -37,16 +37,16 @@
                 </div>
 
                 <div class="col-lg-2">
-                    <a href="lately.jsp#questions">提问 <span class="badge">1</span></a>
+                    <a href="profileCenter.jsp#questions">提问 <span class="badge">1</span></a>
                 </div>
                 <div class="col-lg-2">
-                    <a href="lately.jsp#answer">回答 <span class="badge">2</span></a>
+                    <a href="profileCenter.jsp#answer">回答 <span class="badge">2</span></a>
                 </div>
                 <div class="col-lg-2">
-                    <a href="lately.jsp#agree">赞同 <span class="badge">3</span></a>
+                    <a href="profileCenter.jsp#agree">赞同 <span class="badge">3</span></a>
                 </div>
                 <div class="col-lg-2">
-                    <a href="lately.jsp#collection">收藏 <span class="badge">1</span></a>
+                    <a href="profileCenter.jsp#collection">收藏 <span class="badge">1</span></a>
                 </div>
 
             </div>
@@ -85,7 +85,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="page-header">
-                                    <a href="lately.jsp">亲爱的阿基米德</a>
+                                    <a href="profileCenter.jsp">亲爱的阿基米德</a>
                                     » 关注了<a href="#">3</a>人
                                 </div>
                             </div>
@@ -141,7 +141,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="page-header">
-                                    <a href="lately.jsp">亲爱的阿基米德</a>
+                                    <a href="profileCenter.jsp">亲爱的阿基米德</a>
                                     » 被<a href="#">3</a>人关注
                                 </div>
                             </div>
@@ -197,7 +197,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="page-header">
-                                        <a href="lately.jsp">亲爱的阿基米德</a>
+                                        <a href="profileCenter.jsp">亲爱的阿基米德</a>
                                         » 关注了<a href="#">14</a>个话题
                                     </div>
                                 </div>
