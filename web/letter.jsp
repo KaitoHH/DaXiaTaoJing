@@ -3,6 +3,7 @@
 <head>
     <%@include file="frameJsp/header.jsp" %>
     <title>大夏淘经</title>
+    <link href="css/profile.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -10,22 +11,30 @@
 
 
 <div class="container">
-
-    <%--以下代码请删除--%>
-    <%--以下代码请删除--%>
-    <div class="page-header" id="banner">
-        <div class="row">
-            <div class="col-lg-8 col-md-7 col-sm-6">
-                <h1>Sample</h1>
-
-                <p class="lead">Sample Text</p>
+    <div class="bs-docs-section">
+        <div class="row profile panel">
+            <div class="col-md-4 bg_blur ">
+                <a href="#" class="follow_btn hidden-xs btn btn-primary btn-lg">Follow</a>
             </div>
-            <div class="col-lg-4 col-md-5 col-sm-6">
+            <div class="col-md-8  col-xs-12 info-col">
+                <img src="http://lorempixel.com/180/180/people/6/" class="img-rounded picture hidden-xs">
+                <img src="http://lorempixel.com/180/180/people/6/" class="img-rounded visible-xs picture_mob">
+                <div class="header">
+                    <h2>机智汇</h2>
+                    <h4>软件工程</h4>
+                    <span>为什么，我如此地，机智。</span>
+                </div>
 
+                <div class="btn-group btn-block">
+                    <button class="btn btn-inverse btn-lg">提问 16</button>
+                    <button class="btn btn-inverse btn-lg">回答 14</button>
+                    <button class="btn btn-inverse btn-lg">关注 14</button>
+                    <button class="btn btn-inverse btn-lg">粉丝 14</button>
+                </div>
             </div>
+
         </div>
     </div>
-
     <%--从此位置开始写代码--%>
 
     <div class="row">
@@ -80,14 +89,26 @@
 
                         <div class="form-group">
                             <label for="Avatar" class="col-lg-2 control-label">头像</label>
-                            <div class="col-lg-10 col-sm-6"  id="Avatar">
+                            <div class="col-lg-10 col-sm-6" id="Avatar">
                                 <div class="form-group-itemContent">
                                     <div class="form-groupEditor form-groupEditor-none-avatar">
-                                        <img class="Avatar Avatar--l" src="https://pic1.zhimg.com/da8e974dc_l.jpg" inputsrcset="https://pic1.zhimg.com/da8e974dc_xl.jpg 2x" alt="">
+                                        <img class="Avatar Avatar--l" src="https://pic1.zhimg.com/da8e974dc_l.jpg"
+                                             inputsrcset="https://pic1.zhimg.com/da8e974dc_xl.jpg 2x" alt="">
                                         <span class="form-groupEditor-spinner Spinner"></span>
                                         <!-- 暂时仅针对机构账号显示 mask -->
 
-                                    </div><form target="av_up_frame" style="display:none;" method="post" enctype="multipart/form-data" action="https://upload.zhihu.com:/upload_avatar"><label for="avt_file"></label><input accept="image/*" name="picture" id="avt_file" type="file"><input name="handle_mode" value="upload" type="hidden"><input name="type" value="1" type="hidden"><input name="dest_id" value="79cc5bc9d1e79bb237f2baa3cf7dd4d8" type="hidden"><input name="return_size" value="l" type="hidden"></form>
+                                    </div>
+                                    <form target="av_up_frame" style="display:none;" method="post"
+                                          enctype="multipart/form-data"
+                                          action="https://upload.zhihu.com:/upload_avatar"><label
+                                            for="avt_file"></label><input accept="image/*" name="picture" id="avt_file"
+                                                                          type="file"><input name="handle_mode"
+                                                                                             value="upload"
+                                                                                             type="hidden"><input
+                                            name="type" value="1" type="hidden"><input name="dest_id"
+                                                                                       value="79cc5bc9d1e79bb237f2baa3cf7dd4d8"
+                                                                                       type="hidden"><input
+                                            name="return_size" value="l" type="hidden"></form>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -110,7 +131,8 @@
                                 <label for="inputSentence introduction" class="col-lg-2 control-label">一句话介绍</label>
 
                                 <div class="col-lg-10">
-                                    <input class="form-control" id="inputSentence introduction" placeholder="programmer" type="text">
+                                    <input class="form-control" id="inputSentence introduction" placeholder="programmer"
+                                           type="text">
                                 </div>
                             </div>
 
@@ -151,7 +173,8 @@
                                     <div class="col-lg-5">
                                         <div class="radio">
                                             <label>
-                                                <input name="optionsRadios" id="optionsRadios1" value="option1" checked="checked" type="radio">
+                                                <input name="optionsRadios" id="optionsRadios1" value="option1"
+                                                       checked="checked" type="radio">
                                                 是
                                             </label>
                                         </div>
@@ -159,7 +182,8 @@
                                     <div class="col-lg-5">
                                         <div class="radio">
                                             <label>
-                                                <input name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
+                                                <input name="optionsRadios" id="optionsRadios2" value="option2"
+                                                       type="radio">
                                                 否
                                             </label>
                                         </div>
@@ -172,7 +196,7 @@
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
                             </div>
-                            </div>
+                        </div>
                     </fieldset>
                 </form>
             </div>
@@ -231,12 +255,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
 
 
 <%--在此位置以上结束代码--%>

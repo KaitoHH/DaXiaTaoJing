@@ -24,7 +24,7 @@ $(document).ready(function () {
         dataType: "json",
         success: function (data) {
             if (data.msg == "ok") {
-                $('#welcome-menu').html("欢迎你," + data.name + $('#welcome-menu').html());
+                $('#welcome-menu').html("欢迎你, " + data.name + $('#welcome-menu').html());
                 $('#dropdown-menu').removeClass("hidden");
             } else {
                 $('#login-menu').removeClass("hidden");
