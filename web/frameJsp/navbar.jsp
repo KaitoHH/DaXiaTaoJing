@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%-- navbar --%>
 <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -10,7 +12,7 @@
             </button>
         </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="navbar-main">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">全民悬赏</a></li>
@@ -43,11 +45,10 @@
     </div>
 </div>
 
+<%-- modal --%>
 <div class="bs-docs-section">
     <div class="row">
         <div class="col-lg-6">
-            <!-- Button trigger modal -->
-
 
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
