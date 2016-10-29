@@ -17,19 +17,6 @@
                 <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">全民悬赏</a></li>
                 <li><a href="#">私有悬赏</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                       aria-expanded="false">个人中心<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">我的消息</a></li>
-                        <li><a href="#">我的资料</a></li>
-                        <li><a href="#">最近动态</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">我的关注</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">我的问题</a></li>
-                    </ul>
-                </li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
@@ -38,7 +25,25 @@
                 <button type="submit" class="btn btn-default">搜索</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a data-toggle="modal" data-target="#myModal" href="">登录</a></li>
+                <li class="dropdown hidden" id="dropdown-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-expanded="false" id="welcome-menu"><span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <img src="/imgs/me.jpg" class="img-circle avatar-nav"/>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#">我的消息</a></li>
+                        <li><a href="#">我的资料</a></li>
+                        <li><a href="#">最近动态</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">我的关注</a></li>
+                        <li><a href="#">我的问题</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/logout.do">退出登录</a></li>
+                    </ul>
+                </li>
+                <li><a class="hidden" id="login-menu" data-toggle="modal" data-target="#loginModal" href="">登录</a></li>
             </ul>
         </div>
 
@@ -51,7 +56,7 @@
         <div class="col-lg-6">
 
             <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -60,7 +65,8 @@
                                     aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title" id="myModalLabel">登录</h4>
                         </div>
-                        <form action="loginCheck" method="post">
+                        <div class="alert alert-danger hidden" role="alert" id="responseAlert"></div>
+                        <form action="/login.do" method="post" id="loginForm">
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label class="control-label" for="stuId">学号</label>

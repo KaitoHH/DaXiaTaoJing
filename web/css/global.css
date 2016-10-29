@@ -1,4 +1,13 @@
-.navbar-holder-dark{
+.navbar-holder-dark {
     padding: 20px 20px 200px 20px;
     background: #333333;
+}
+
+.avatar-nav {
+    padding: 3px 20px;
+    width: 120px;
+}
+
+#responseAlert {
+    border-radius: 0px;
 }
