@@ -15,7 +15,7 @@
 
 <%--js元素--%>
 <script src="/js/jQuery/jquery-2.1.3.min.js"></script>
-<script src="http://malsup.github.io/jquery.form.js"></script>
+<script src="/js/jQuery/jquery.form.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/login.js"></script>
 

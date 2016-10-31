@@ -2,10 +2,11 @@
 <!DOCTYPE html>
 <head>
     <%@include file="frameJsp/header.jsp" %>
+    <%@include file="frameJsp/pulgin/textarea.jsp" %>
     <title>大夏淘经</title>
     <style type="text/css">
-        body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
-            font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        body, button, input, select, textarea, h1, h2, h3, h4, h5, h6 {
+            font-family: Microsoft YaHei, '宋体', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
         }
     </style>
     <link rel="stylesheet" href="bower_components/trumbowyg/dist/ui/trumbowyg.min.css">
@@ -44,8 +45,12 @@
                         <div class="form-group">
                             <label class="col-lg-1 col-md-1 control-label">描述</label>
                             <div class="col-lg-10 col-md-10">
+<<<<<<< HEAD
                                 <textarea rows=20 class="form-control">
                                 </textarea>
+=======
+                                <textarea rows=20 class="editor"></textarea>
+>>>>>>> origin/master
                             </div>
                         </div>
                         <div class="form-group">
@@ -77,10 +82,7 @@
         </div>
     </div>
     <%@include file="frameJsp/footer.jsp" %>
-
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.0.min.js"><\/script>')</script>
-<script src="bower_components/trumbowyg/dist/trumbowyg.min.js"></script>
+
 </body>
 </html>
