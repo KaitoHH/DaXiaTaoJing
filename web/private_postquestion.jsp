@@ -8,6 +8,7 @@
             font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
         }
     </style>
+    <link rel="stylesheet" href="bower_components/trumbowyg/dist/ui/trumbowyg.min.css">
 </head>
 <body>
 
@@ -43,7 +44,8 @@
                         <div class="form-group">
                             <label class="col-lg-1 col-md-1 control-label">描述</label>
                             <div class="col-lg-10 col-md-10">
-                                <textarea rows=20 class="form-control"></textarea>
+                                <textarea rows=20 class="form-control">
+                                </textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -77,7 +79,8 @@
     <%@include file="frameJsp/footer.jsp" %>
 
 </div>
-
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.0.min.js"><\/script>')</script>
+<script src="bower_components/trumbowyg/dist/trumbowyg.min.js"></script>
 </body>
 </html>
