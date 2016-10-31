@@ -9,22 +9,13 @@ import java.io.IOException;
 /**
  * Project: DaXiaTaoJing
  * Author: KaitoHH
- * Create Date: 2016/10/29
+ * Create Date: 2016/10/31
  * Description:
  * All rights reserved.
  */
-public class ProfileServlet extends HttpServlet {
+public class AskServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String uri = req.getRequestURI();
-		String reqJsp = "/profileCenter.jsp";
-		if (uri.equals("/user/setting")) {
-			reqJsp = "/profileSetting.jsp";
-		} else if (uri.equals("/user/concern")) {
-			reqJsp = "/profileConcern.jsp";
-		} else if (uri.equals("/user/letter")) {
-			reqJsp = "/profilePM.jsp";
-		}
-		req.getRequestDispatcher(reqJsp).forward(req, resp);
+		req.getRequestDispatcher("post_question.jsp").forward(req, resp);
 	}
 }

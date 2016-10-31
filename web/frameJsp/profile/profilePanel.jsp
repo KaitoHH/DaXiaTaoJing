@@ -22,8 +22,8 @@
             <div class="btn-group btn-block">
                 <button class="btn btn-inverse btn-lg">提问 16</button>
                 <button class="btn btn-inverse btn-lg">回答 14</button>
-                <button class="btn btn-inverse btn-lg">关注 14</button>
-                <button class="btn btn-inverse btn-lg">粉丝 14</button>
+                <button class="btn btn-inverse btn-lg" href="/user/concern">关注 14</button>
+                <button class="btn btn-inverse btn-lg" href="/user/concern">粉丝 14</button>
             </div>
         </div>
 

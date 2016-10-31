@@ -154,7 +154,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="zm-profile-side-section-title">
-                        关注了 <a href="concern.jsp#topics" class="zg-link-litblue"><strong>14 个话题</strong></a>
+                        关注了 <a href="profileConcern.jsp#topics" class="zg-link-litblue"><strong>14 个话题</strong></a>
                     </div>
                 </div>
             </div>

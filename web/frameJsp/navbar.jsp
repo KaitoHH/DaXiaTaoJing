@@ -25,6 +25,7 @@
                 <button type="submit" class="btn btn-default">搜索</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="/ask" class="btn btn-primary" style="font-size: 15px;">提问</a></li>
                 <li class="dropdown hidden" id="dropdown-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                        aria-expanded="false" id="welcome-menu"><span class="caret"></span></a>
@@ -33,11 +34,11 @@
                             <img src="/imgs/me.jpg" class="img-circle avatar-nav"/>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="#">我的消息</a></li>
+                        <li><a href="/user/letter">我的消息</a></li>
                         <li><a href="/user">个人中心</a></li>
                         <li><a href="/user/setting">设置</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">我的关注</a></li>
+                        <li><a href="/user/concern">我的关注</a></li>
                         <li><a href="#">我的问题</a></li>
                         <li class="divider"></li>
                         <li><a href="/logout.do">退出登录</a></li>

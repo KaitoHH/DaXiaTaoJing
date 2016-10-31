@@ -1,15 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: KaitoHH
-  Date: 2016/10/31
-  Time: 23:06
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="/css/trumbowyg.min.css">
 <script type="text/javascript" src="/js/trumbowyg/trumbowyg.min.js"></script>
-<script type="text/javascript" src="/js/langs/zh_cn.min.js"></script>
-<script type="text/javascript" src="/js/plugins/upload/trumbowyg.upload.min.js"></script>
+<script type="text/javascript" src="/js/trumbowyg/langs/zh_cn.min.js"></script>
+<script type="text/javascript" src="/js/trumbowyg/plugins/upload/trumbowyg.upload.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.editor').trumbowyg({

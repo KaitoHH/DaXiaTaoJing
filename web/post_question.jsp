@@ -38,7 +38,7 @@
                         <div class="form-group">
                             <label class="col-lg-1 col-md-1 control-label">指定</label>
                             <div class="col-lg-10 col-md-10">
-                                <input type="text" placeholder="在此输入您想邀请的用户的ID" class="form-control">
+                                <input type="text" placeholder="在此输入您想邀请的用户的ID, 留空则转为公共问题" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">

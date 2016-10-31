@@ -113,7 +113,7 @@
             </div>
             <p>
                 你可以发布一个问题，指定一个回答着，并向Ta支付。
-                <a href="private_postquestion.jsp" class="btn-link"> >>点击此处发布你的问题 </a>
+                <a href="post_question.jsp" class="btn-link"> >>点击此处发布你的问题 </a>
             </p>
         </div>
     </div>
