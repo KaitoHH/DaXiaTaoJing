@@ -9,6 +9,7 @@
             font-family: Microsoft YaHei, '宋体', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
         }
     </style>
+    <link rel="stylesheet" href="bower_components/trumbowyg/dist/ui/trumbowyg.min.css">
 </head>
 <body>
 
@@ -44,7 +45,12 @@
                         <div class="form-group">
                             <label class="col-lg-1 col-md-1 control-label">描述</label>
                             <div class="col-lg-10 col-md-10">
+<<<<<<< HEAD
+                                <textarea rows=20 class="form-control">
+                                </textarea>
+=======
                                 <textarea rows=20 class="editor"></textarea>
+>>>>>>> origin/master
                             </div>
                         </div>
                         <div class="form-group">
@@ -77,7 +83,6 @@
     </div>
     <%@include file="frameJsp/footer.jsp" %>
 </div>
-
 
 </body>
 </html>

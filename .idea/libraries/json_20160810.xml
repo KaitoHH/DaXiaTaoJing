@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="json-20160810">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/json-20160810.jar!/" />
+      <root url="file://$PROJECT_DIR$/lib" />
+      <root url="file://$PROJECT_DIR$/../apache-tomcat-9.0.0.M11-windows-x64/apache-tomcat-9.0.0.M11/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../apache-tomcat-9.0.0.M11-windows-x64/apache-tomcat-9.0.0.M11/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
+  </library>
+</component>
