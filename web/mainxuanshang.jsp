@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <head>
     <%@include file="frameJsp/header.jsp" %>
+    <%@include file="frameJsp/pulgin/textarea.jsp" %>
     <title>大夏淘经</title>
 </head>
 <body>
@@ -83,7 +84,7 @@
                         <label for="textArea" class="col-lg-2 control-label">问题答案</label>
 
                         <div class="col-lg-10">
-                            <textarea class="form-control" rows="3" id="textArea"></textarea>
+                            <textarea class="editor" rows="3" id="textArea"></textarea>
                             <span class="help-block">分享你的知识与经验</span>
                         </div>
                     </div>
