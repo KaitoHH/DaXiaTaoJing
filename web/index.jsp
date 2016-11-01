@@ -306,6 +306,25 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                    <h2 id="type-blockquotes">名人名言</h2>
+                    <div class="col-lg-6">
+                        <div class="bs-component">
+                            <blockquote>
+                                <p>读书忌死读，死读钻牛角。 </p>
+                                <small><cite title="Source Title"> 叶圣陶</cite></small>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bs-component">
+                            <blockquote class="pull-right">
+                                <p>吾生也有涯，而知也无涯。 </p>
+                                <small><cite title="Source Title">庄子</cite></small>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
 
 
             <%--在此位置以上结束代码--%>
