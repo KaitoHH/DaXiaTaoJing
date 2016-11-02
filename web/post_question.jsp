@@ -45,12 +45,7 @@
                         <div class="form-group">
                             <label class="col-lg-1 col-md-1 control-label">描述</label>
                             <div class="col-lg-10 col-md-10">
-<<<<<<< HEAD
-                                <textarea rows=20 class="form-control">
-                                </textarea>
-=======
                                 <textarea rows=20 class="editor"></textarea>
->>>>>>> origin/master
                             </div>
                         </div>
                         <div class="form-group">

@@ -15,3 +15,7 @@
 hs_err_pid*
 
 out/
+/.idea/workspace.xml
+.DS_Store
+.idea/libraries/lib.xml
+web/.DS_Store
