@@ -62,7 +62,7 @@
         <div class="panel panel-default">
             <div class="panel-body">
 
-                <h3>其他答案</h3>
+                <h2>其他答案</h2>
                 <a class="author-link" href="">  饿米</a><br/>
                 <div >好难呀</div><br/>
 
