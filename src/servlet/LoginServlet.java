@@ -1,6 +1,7 @@
 package servlet;
 
 import Entity.User;
+import database.UserDAO;
 import org.json.JSONObject;
 import service.LoginService;
 
@@ -35,8 +36,12 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter out = resp.getWriter();
 		if (result) {
 			out.print("0");
-			req.getSession().setAttribute("user", loginService);
-			//TODO 若该用户第一次登录,存相关数据到数据库上
+			User user = new User();
+			user.setDept(loginService.getDept());
+			user.setId(loginService.getId());
+			user.setName(loginService.getName());
+			user = new UserDAO().checkOrInsert(user);
+			req.getSession().setAttribute("user", user);
 		} else {
 			out.print(loginService.getErrorMsg());
 		}
@@ -47,7 +52,7 @@ public class LoginServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		JSONObject jsonObject = new JSONObject();
-		LoginService user = (LoginService) req.getSession().getAttribute("user");
+		User user = (User) req.getSession().getAttribute("user");
 		String msg = "ok";
 		if (user != null) {
 			jsonObject.put("name", user.getName());
@@ -58,4 +63,5 @@ public class LoginServlet extends HttpServlet {
 		resp.setContentType("application/json;charset=utf-8");
 		resp.getWriter().print(jsonObject);
 	}
+
 }

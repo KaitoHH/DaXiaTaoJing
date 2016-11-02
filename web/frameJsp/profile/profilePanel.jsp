@@ -1,7 +1,8 @@
 <%@ page import="service.LoginService" %>
+<%@ page import="Entity.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    LoginService user = (LoginService) session.getAttribute("user");
+    User user = (User) session.getAttribute("user");
 %>
 <div class="bs-docs-section">
     <div class="row profile panel">

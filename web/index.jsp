@@ -10,14 +10,7 @@
 
 
 <div class="container" >
-    <style>
-        a{
-            font-size: 21px;
-        }
-        body{
-            font-size:21px;
-        }
-    </style>
+
     <%--以下代码请删除--%>
     <div class="page-header" >
         <div class="row">

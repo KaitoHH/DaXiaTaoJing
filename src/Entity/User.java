@@ -7,12 +7,14 @@ package Entity;
  * Description:
  * All rights reserved.
  */
-//Javabean
 public class User {
 	String name;
-	int id;
+	String id;
 	String dept;
-	String phone;
+	String email;
+	int gender;
+	String introduction;
+	String longIntro;
 
 	public String getName() {
 		return name;
@@ -22,11 +24,11 @@ public class User {
 		this.name = name;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -38,12 +40,35 @@ public class User {
 		this.dept = dept;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
+	public int getGender() {
+		return gender;
+	}
+
+	public void setGender(int gender) {
+		this.gender = gender;
+	}
+
+	public String getIntroduction() {
+		return introduction;
+	}
+
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction;
+	}
+
+	public String getLongIntro() {
+		return longIntro;
+	}
+
+	public void setLongIntro(String longIntro) {
+		this.longIntro = longIntro;
+	}
 }

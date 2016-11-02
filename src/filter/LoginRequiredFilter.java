@@ -1,5 +1,6 @@
 package filter;
 
+import Entity.User;
 import service.LoginService;
 
 import javax.servlet.*;
@@ -24,7 +25,7 @@ public class LoginRequiredFilter implements Filter {
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
 		HttpServletResponse response = (HttpServletResponse) servletResponse;
-		LoginService loginService = (LoginService) request.getSession().getAttribute("user");
+		User loginService = (User) request.getSession().getAttribute("user");
 		if (loginService == null) {
 			response.sendRedirect("/");
 		} else {

@@ -1,6 +1,7 @@
 package servlet;
 
 
+import Entity.User;
 import service.LoginService;
 
 import javax.servlet.ServletException;
@@ -19,7 +20,7 @@ import java.io.IOException;
 public class LogoutServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		LoginService user = (LoginService) req.getSession().getAttribute("user");
+		User user = (User) req.getSession().getAttribute("user");
 		if (user != null) {
 			req.getSession().removeAttribute("user");
 			req.getSession().invalidate();
