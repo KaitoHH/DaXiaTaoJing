@@ -39,52 +39,71 @@
     <div class="col-lg-6">
     <div class="page-header" id="banner">
 
-        <div class="panel panel-default">
-            <div class="panel-body">
 
 
 
 
 
-                <h1 id="sbuttons"><a class="btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> 千金悬赏&nbsp;&nbsp;&nbsp;&nbsp;<a href="question.jsp" class="btn btn-primary " data-toggle="popover" title="Popover title" data-content="提问">提问</a></h1>
+
+
+                <h1 id="sbuttons"><a class="btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> 千金悬赏&nbsp;&nbsp;&nbsp;&nbsp;
+                    </h1>
 
 
 
-                <div class="row">
-                    <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-                        <div class="page-header">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <h4>数字逻辑怎么学？<br/><small>提问者: 米老鼠</small></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <hr width="80%" color=#987cb9 SIZE=10 >
-                        <div class="page-header">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <h4>高等数学怎么学？<br/><small>提问者: 米老鼠</small></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <hr width="80%" color=#987cb9 SIZE=10 >
-                        <div class="page-header">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <h4>数据结构怎么学？<br/><small>提问者: 米老鼠</small></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <hr width="80%" color=#987cb9 SIZE=10 >
-                        <div class="page-header">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <h4>离散数学怎么学？<br/><small>提问者: 米老鼠</small></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <hr width="80%" color=#987cb9 SIZE=10 >
-                    </div>
+        <div >
+            <div class="bs-component">
+                <div class="list-group">
+                    <a href="#" class="list-group-item">
+                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
+
+                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
+
+                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
+
+                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
+
+                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
+
+                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
+
+                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
+
+                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
+
+                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
+
+                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
+
+                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -141,22 +160,22 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-6">
+
                     <div class="bs-component">
                         <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                            <p>趁年轻少壮去探求知识吧，它将弥补由于年老而带来的亏损。智慧乃是老年的精神养料，所以年轻时应该努力，这样，年轻时才不致空虚</p>
+                            <small><cite title="Source Title">达·芬奇</cite></small>
                         </blockquote>
                     </div>
-                </div>
-                <div class="col-lg-6">
+
+
                     <div class="bs-component">
-                        <blockquote class="pull-right">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                        <blockquote>
+                            <p>我们所有的知识都开始于感性，然后进入到知性，最后以理性告终。没有比理性更高的东西了。</p>
+                            <small><cite title="Source Title">康德</cite></small>
                         </blockquote>
                     </div>
-                </div>
+
             </div>
 
         </div>
