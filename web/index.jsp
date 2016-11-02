@@ -10,7 +10,14 @@
 
 
 <div class="container" >
-
+    <style>
+        a{
+            font-size: 15px;
+        }
+        body{
+            font-size:18px;
+        }
+    </style>
     <%--以下代码请删除--%>
     <div class="page-header" >
         <div class="row">
@@ -24,50 +31,51 @@
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner">
                                     <div class="item">
-                                        <img src="http://lorempixel.com/1200/400/sports/1/">
+                                        <img src="imgs\111.jpg">
                                         <div class="carousel-caption">
                                             <h3>
-                                                Lorem ipsum dolor sit amet</h3>
+                                                人文社会科学</h3>
                                             <p>
-                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
-                                                ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                                                感受文之美</p>
+                                            <p>
+                                                哲学类·经济学类·教育学类·历史学类·法学类·文学类·管理类
+                                            </p>
                                         </div>
                                     </div>
                                     <!-- End Item -->
                                     <div class="item">
-                                        <img src="http://lorempixel.com/1200/400/sports/2/">
+                                        <img src="imgs\222.jpg">
                                         <div class="carousel-caption">
                                             <h3>
-                                                Dolore magna aliquyam erat</h3>
+                                                自然科学、应用科学以及数理逻辑的统称</h3>
                                             <p>
-                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
-                                                ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                                               体验理之趣 </p>
+                                            <p>
+                                                数学类·物理学类·化学类·地理科学类·生物科学类·心理学类·统计学类等
+                                            </p>
                                         </div>
                                     </div>
                                     <!-- End Item -->
                                     <div class="item active">
-                                        <img src="http://lorempixel.com/1200/400/sports/3/">
+                                        <img src="imgs\333.jpg">
                                         <div class="carousel-caption">
                                             <h3>
-                                                Labore et dolore magna aliquyam erat</h3>
+                                                工程学</h3>
                                             <p>
-                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
-                                                ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                                                实践工之用</p>
+                                            <p>
+                                                力学类·机械类·材料类·电子信息类·计算机及软件类·建筑类等
+                                            </p>
                                         </div>
                                     </div>
                                     <!-- End Item -->
                                     <div class="item">
-                                        <img src="http://lorempixel.com/1200/400/sports/4/">
+                                        <img src="imgs\444.png">
                                         <div class="carousel-caption">
                                             <h3>
-                                                Consetetur sadipscing elitr</h3>
+                                                其它</h3>
                                             <p>
-                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
-                                                ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                                                用心体会生活的美好</p>
                                         </div>
                                     </div>
                                     <!-- End Item -->
@@ -77,7 +85,7 @@
                                     <li data-target="#featureCarousel" data-slide-to="0" class=""><a href="#" style="font-size:21px">文科</a></li>
                                     <li data-target="#featureCarousel" data-slide-to="1" class=""><a href="#" style="font-size:21px">理科</a></li>
                                     <li data-target="#featureCarousel" data-slide-to="2" class="active"><a href="#" style="font-size:21px">工科</a></li>
-                                    <li data-target="#featureCarousel" data-slide-to="3" class=""><a href="#" style="font-size:21px">思政&英语</a></li>
+                                    <li data-target="#featureCarousel" data-slide-to="3" class=""><a href="#" style="font-size:21px">其它</a></li>
                                 </ul>
                             </div>
                             <!-- End Carousel -->
@@ -105,7 +113,7 @@
                                     <div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <a href="#">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
+                                                <a href="#" style="font-size:15px" >  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
                                             </div>
                                             <div class="panel-body">
                                                 来自学科：<a href="#" class="alert-link">计算机科学概论</a>
@@ -301,22 +309,18 @@
             </div>
             <div class="row">
                     <h2 id="type-blockquotes">名人名言</h2>
-                    <div class="col-lg-6">
-                        <div class="bs-component">
-                            <blockquote>
-                                <p>读书忌死读，死读钻牛角。 </p>
-                                <small><cite title="Source Title"> 叶圣陶</cite></small>
-                            </blockquote>
-                        </div>
+                <div class="bs-component">
+                    <blockquote>
+                        <p>读书忌死读，死读钻牛角。 </p>
+                        <small><cite title="Source Title"> 叶圣陶</cite></small>
+                    </blockquote>
+                    <div class="bs-component">
+                        <blockquote>
+                            <p>吾生也有涯，而知也无涯。 </p>
+                            <small><cite title="Source Title">庄子</cite></small>
+                        </blockquote>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="bs-component">
-                            <blockquote class="pull-right">
-                                <p>吾生也有涯，而知也无涯。 </p>
-                                <small><cite title="Source Title">庄子</cite></small>
-                            </blockquote>
-                        </div>
-                    </div>
+                </div>
                 </div>
 
 
