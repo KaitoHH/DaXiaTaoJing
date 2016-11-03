@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
+<html  ng-app="daxiataojingApp">
 <head>
     <%@include file="frameJsp/header.jsp" %>
     <title>大夏淘经</title>
@@ -20,8 +21,8 @@
 
     <div class="row">
         <div class="col-lg-6">
-            <a name="questions">
-                <div class="panel panel-default">
+            <a name="questions" >
+                <div class="panel panel-default" ng-controller="AskProblemsController">
                     <div class="panel-body">
                         <div class="col-lg-3">
                             <span class="zg-gray-normal">提问</span><br><br>
@@ -34,60 +35,20 @@
                     </div>
                     <hr width="100%" color=#987cb9 SIZE=10 >
                     <ul class="list-unstyled">
-                        <li>
+                        <li ng-repeat="askProblem in askProblems">
+                            <hr width="80%" color=#987cb9 SIZE=10 ng-show="$index > 0">
                             <div class="panel-body">
                                 <div class="col-lg-2">
                                     <div class="bs-component">
                                         <div class="well well-sm">
-                                            123次<br>浏览
+                                            {{askProblem.looktimes}}次<br>浏览
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-10">
-                                    <a href="#"> 二数余一,五数余二,七数余三,九数余四,问该数几何?</a><br>
-                                    来自学科：<a href="#" class="alert-link">离散数学 </a>
-                                    • 4个回答 • 8人关注 <a href="#" class="alert-link">取消关注</a>
-                                    <div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <hr width="80%" color=#987cb9 SIZE=10 >
-                        <li>
-                            <div class="panel-body">
-                                <div class="col-lg-2">
-                                    <div class="bs-component">
-                                        <div class="well well-sm">
-                                            123次<br>浏览
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-10">
-                                    <a href="#"> 二数余一,五数余二,七数余三,九数余四,问该数几何?</a><br>
-                                    来自学科：<a href="#" class="alert-link">离散数学 </a>
-                                    • 4个回答 • 8人关注 <a href="#" class="alert-link">取消关注</a>
-                                    <div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-
-                        <hr width="80%" color=#987cb9 SIZE=10 >
-                        <li>
-                            <div class="panel-body">
-                                <div class="col-lg-2">
-                                    <div class="bs-component">
-                                        <div class="well well-sm">
-                                            123次<br>浏览
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-10">
-                                    <a href="#"> 二数余一,五数余二,七数余三,九数余四,问该数几何?</a><br>
-                                    来自学科：<a href="#" class="alert-link">离散数学 </a>
-                                    • 4个回答 • 8人关注 <a href="#" class="alert-link">取消关注</a>
+                                    <a href="#"> {{askProblem.title}}</a><br>
+                                    来自学科：<a href="#" class="alert-link">{{askProblem.subject}} </a>
+                                    • {{askProblem.numberOfAnswers}}个回答 • {{askProblem.numberOfFollowers}}人关注 <a href="#" class="alert-link">取消关注</a>
                                     <div>
                                     </div>
                                 </div>
@@ -291,12 +252,12 @@
 
         </div>
     </div>
-
+</div>
 
     <%--在此位置以上结束代码--%>
     <%@include file="frameJsp/footer.jsp" %>
-</div>
 
-
+<script src="/js/angular/angular.min.js"></script>
+<script src="/js/angular/app.js"></script>
 </body>
 </html>
