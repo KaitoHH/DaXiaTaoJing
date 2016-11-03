@@ -31,68 +31,12 @@
 
     <div class="col-xs-12 col-sm-8">
 
-        <!-- <div class="panel panel-default">
-            <div class="panel-body">
-                <h1 id="sbuttons"><a class="btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> 千金悬赏&nbsp;&nbsp;&nbsp;&nbsp;<a
-                        href="question.jsp" class="btn btn-primary " data-toggle="popover" title="Popover title"
-                        data-content="提问">提问</a></h1>
-
-                    <div class="row">
-                        <div class="col-sm-9 col-xs-12">
-                            <h4>数字逻辑怎么学？<br/>
-                                <small>提问者: 米老鼠</small>
-                            </h4>
-                        </div>
-                    </div>
-
-
-                <hr width="80%" color=#987cb9 SIZE=10>
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <h4>高等数学怎么学？<br/>
-                                <small>提问者: 米老鼠</small>
-                            </h4>
-                        </div>
-                    </div>
-                <hr width="80%" color=#987cb9 SIZE=10>
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <h4>数据结构怎么学？<br/>
-                                <small>提问者: 米老鼠</small>
-                            </h4>
-                        </div>
-                    </div>
-                <hr width="80%" color=#987cb9 SIZE=10>
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <h4>离散数学怎么学？<br/>
-                                <small>提问者: 米老鼠</small>
-                            </h4>
-                        </div>
-                    </div>
-                <hr width="80%" color=#987cb9 SIZE=10>
-            </div>
-
-            <div style="margin-left: 20px">
-                <ul class="pagination">
-                    <li><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li class="disabled"><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ul>
-            </div>
-
-        </div> -->
         <h1 id="sbuttons"><a class="btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> 千金悬赏&nbsp;&nbsp;&nbsp;&nbsp;
         </h1>
 
 
 
         <div >
-
             <div class="bs-component">
                 <ul class="list-group">
                     <li href="#" class="list-group-item">
