@@ -40,7 +40,7 @@
             <div class="bs-component">
                 <ul class="list-group">
                     <li href="#" class="list-group-item">
-                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
+                        <h3 class="list-group-item-heading"><a href="question.jsp">高等数学怎么学？</a><br/><small>提问者: 米老鼠</small></h3>
 
                         <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
                     </li>

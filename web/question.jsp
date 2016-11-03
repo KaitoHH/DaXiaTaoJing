@@ -1,14 +1,15 @@
 <%--
   Created by IntelliJ IDEA.
   User: jmqxnxg
-  Date: 2016/10/22
-  Time: 16:26
+  Date: 2016/10/24
+  Time: 20:05
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <head>
     <%@include file="frameJsp/header.jsp" %>
+    <%@include file="frameJsp/pulgin/textarea.jsp" %>
     <title>大夏淘经</title>
 </head>
 <body>
@@ -18,133 +19,75 @@
 
 <div class="container">
 
-        <div class="page-header" id="banner">
+
+    <div class="page-header" id="banner">
+
 
         <div class="panel panel-default">
             <div class="panel-body">
 
+                <div >
+
+                    <button type="button" class="btn btn-default">计算机</button>
+                    <button type="button" class="btn btn-default">大学</button>
+                    <button type="button" class="btn btn-default">数字逻辑</button>
+
+                </div>
 
 
 
+                <h1>数字逻辑怎么学？</h1>
 
-                <h1 id="sbuttons"><a class="btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> 说出你的疑惑</h1>
+                <div >数字逻辑整体的结构是什么？感觉学的很模糊</div><br/>
 
+                <button class="btn btn-success btn-lg">悬赏金额：1元</button>
 
-
-
+                <a href="#answer" class="btn btn-primary btn-lg" data-toggle="popover" title="Popover title" data-content="回答问题">回答问题</a>
             </div>
         </div>
 
 
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <h2>最佳答案</h2>
+                <a class="author-picture" href=""><img src="imgs/1.jpg"class="img-circle" alt="image" style="width:50px;height:50px;" ></a>
+
+                <a class="author-link" href="">米老鼠</a><br/>
+                <div >关于问题具体的回答：数字逻辑怎么学呢,认真学。</div>
+            </div>
+        </div>
 
 
-    <div class="page-header" id="banner">
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <h2>其他答案</h2>
+                <a class="author-link" href="">  饿米</a><br/>
+                <div >好难呀</div><br/>
+
+                <a class="author-link" href="">  分米</a><br/>
+                <div >数字逻辑怎么学呢。。。。</div><br/>
+
+                <a class="author-link" href="">  里米</a><br/>
+                <div >微笑</div><br/>
+            </div>
+        </div>
+
         <div>
             <form class="form-horizontal">
                 <fieldset>
-
-                    <legend>千金悬赏</legend>
+                    <legend id="answer">回答问题</legend>
 
 
                     <div class="form-group">
-                        <label for="textArea" class="col-lg-2 control-label">提问</label>
+                        <label for="textArea" class="col-lg-2 control-label">问题答案</label>
+
                         <div class="col-lg-10">
-                            <textarea class="form-control" rows="3" id="textArea">
-
-                            <div class="box box-element ui-draggable" style="display: block;">
-                                <a href="#close" class="remove label label-danger">
-                                    <i class="glyphicon glyphicon-remove"></i>
-                                    删除
-                                </a>
-                                <span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
-</span>
-                                <span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
-对齐
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="active">
-<a href="#" rel="">默认</a>
-</li>
-<li class="">
-<a href="#" rel="text-left">靠左</a>
-</li>
-<li class="">
-<a href="#" rel="text-center">居中</a>
-</li>
-<li class="">
-<a href="#" rel="text-right">靠右</a>
-</li>
-</ul>
-</span>
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
-标记
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="active">
-<a href="#" rel="">默认</a>
-</li>
-<li class="">
-<a href="#" rel="muted">禁用</a>
-</li>
-<li class="">
-<a href="#" rel="text-warning">警告</a>
-</li>
-<li class="">
-<a href="#" rel="text-error">错误</a>
-</li>
-<li class="">
-<a href="#" rel="text-info">提示</a>
-</li>
-<li class="">
-<a href="#" rel="text-success">成功</a>
-</li>
-</ul>
-</span>
-<a class="btn btn-xs btn-default" href="#" rel="lead">Lead</a>
-</span>
-                                <div class="preview">段落</div>
-                                <div class="view">
-                                    <p> <em>Git</em>
-                                        是一个分布式的版本控制系统，最初由 <strong>Linus Torvalds</strong>
-                                        编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在
-                                        <small>Ruby</small>
-                                        社区中。
-                                    </p>
-                                </div>
-                            </div>
-
-                                </textarea>
-                            <span class="help-block">有质量有意义的提问更有助于大家的进步</span>
+                            <textarea class="editor" rows="3" id="textArea"></textarea>
+                            <span class="help-block">分享你的知识与经验</span>
                         </div>
                     </div>
-
-
-
-
-
-                    <div class="form-group">
-                        <label class="col-lg-2 control-label" for="inputDefault">话题</label>
-                        <div class="col-lg-10">
-                        <input class="form-control" id="inputDefault" type="text">
-                    </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-lg-2 control-label" for="inputSmall">悬赏金额</label>
-                        <div class="col-lg-10">
-                            <input class="form-control" id="inputSmall" type="text">
-                        </div>
-                    </div>
-
-
-
 
                     <div class="form-group">
                         <label class="col-lg-2 control-label">匿名</label>
@@ -175,11 +118,11 @@
                 </fieldset>
             </form>
         </div>
+
     </div>
 
 
 
-        </div>
 
 
     <%@include file="frameJsp/footer.jsp" %>
@@ -188,4 +131,3 @@
 
 </body>
 </html>
-

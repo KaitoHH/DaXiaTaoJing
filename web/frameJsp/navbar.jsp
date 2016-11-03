@@ -15,8 +15,8 @@
         <div class="collapse navbar-collapse" id="navbar-main">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
-                <li><a href="#">全民悬赏</a></li>
-                <li><a href="#">私有悬赏</a></li>
+                <li><a href="/read.jsp">全民悬赏</a></li>
+                <li><a href="/private_index.jsp">私有悬赏</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
