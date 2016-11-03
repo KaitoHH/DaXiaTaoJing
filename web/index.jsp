@@ -8,6 +8,69 @@
 
 <%@include file="frameJsp/navbar.jsp" %>
 
+<%-- 四张图片不完全一样大，切换边界有点空白 --%>
+<div id="featureCarousel" class="carousel slide" data-ride="carousel" style="margin-top: 48px">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item">
+            <img src="imgs\111.jpg">
+            <div class="carousel-caption">
+                <h3>
+                    人文社会科学</h3>
+                <p>
+                    感受文之美</p>
+                <p>
+                    哲学类·经济学类·教育学类·历史学类·法学类·文学类·管理类
+                </p>
+            </div>
+        </div>
+        <!-- End Item -->
+        <div class="item">
+            <img src="imgs\222.jpg">
+            <div class="carousel-caption">
+                <h3>
+                    自然科学、应用科学以及数理逻辑的统称</h3>
+                <p>
+                    体验理之趣 </p>
+                <p>
+                    数学类·物理学类·化学类·地理科学类·生物科学类·心理学类·统计学类等
+                </p>
+            </div>
+        </div>
+        <!-- End Item -->
+        <div class="item active">
+            <img src="imgs\333.jpg">
+            <div class="carousel-caption">
+                <h3>
+                    工程学</h3>
+                <p>
+                    实践工之用</p>
+                <p>
+                    力学类·机械类·材料类·电子信息类·计算机及软件类·建筑类等
+                </p>
+            </div>
+        </div>
+        <!-- End Item -->
+        <div class="item">
+            <img src="imgs\444.png">
+            <div class="carousel-caption">
+                <h3>
+                    其它</h3>
+                <p>
+                    用心体会生活的美好</p>
+            </div>
+        </div>
+        <!-- End Item -->
+    </div>
+    <!-- End Carousel Inner -->
+    <ul class="nav nav-pills nav-justified">
+        <li data-target="#featureCarousel" data-slide-to="0" class=""><a href="#" style="font-size:21px">文科</a></li>
+        <li data-target="#featureCarousel" data-slide-to="1" class=""><a href="#" style="font-size:21px">理科</a></li>
+        <li data-target="#featureCarousel" data-slide-to="2" class="active"><a href="#" style="font-size:21px">工科</a></li>
+        <li data-target="#featureCarousel" data-slide-to="3" class=""><a href="#" style="font-size:21px">其它</a></li>
+    </ul>
+</div>
+
 
 <div class="container" >
     <style>
@@ -27,67 +90,9 @@
                         <div class="col-lg-12">
 
 
-                            <div id="featureCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-                                    <div class="item">
-                                        <img src="imgs\111.jpg">
-                                        <div class="carousel-caption">
-                                            <h3>
-                                                人文社会科学</h3>
-                                            <p>
-                                                感受文之美</p>
-                                            <p>
-                                                哲学类·经济学类·教育学类·历史学类·法学类·文学类·管理类
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- End Item -->
-                                    <div class="item">
-                                        <img src="imgs\222.jpg">
-                                        <div class="carousel-caption">
-                                            <h3>
-                                                自然科学、应用科学以及数理逻辑的统称</h3>
-                                            <p>
-                                               体验理之趣 </p>
-                                            <p>
-                                                数学类·物理学类·化学类·地理科学类·生物科学类·心理学类·统计学类等
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- End Item -->
-                                    <div class="item active">
-                                        <img src="imgs\333.jpg">
-                                        <div class="carousel-caption">
-                                            <h3>
-                                                工程学</h3>
-                                            <p>
-                                                实践工之用</p>
-                                            <p>
-                                                力学类·机械类·材料类·电子信息类·计算机及软件类·建筑类等
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- End Item -->
-                                    <div class="item">
-                                        <img src="imgs\444.png">
-                                        <div class="carousel-caption">
-                                            <h3>
-                                                其它</h3>
-                                            <p>
-                                                用心体会生活的美好</p>
-                                        </div>
-                                    </div>
-                                    <!-- End Item -->
-                                </div>
-                                <!-- End Carousel Inner -->
-                                <ul class="nav nav-pills nav-justified">
-                                    <li data-target="#featureCarousel" data-slide-to="0" class=""><a href="#" style="font-size:21px">文科</a></li>
-                                    <li data-target="#featureCarousel" data-slide-to="1" class=""><a href="#" style="font-size:21px">理科</a></li>
-                                    <li data-target="#featureCarousel" data-slide-to="2" class="active"><a href="#" style="font-size:21px">工科</a></li>
-                                    <li data-target="#featureCarousel" data-slide-to="3" class=""><a href="#" style="font-size:21px">其它</a></li>
-                                </ul>
-                            </div>
+                            <%-- move Carousel out of class'page-header' --%>
+
+
                             <!-- End Carousel -->
 
 
