@@ -35,9 +35,6 @@
                     </div>
                     <hr width="100%" color=#987cb9 SIZE=10 >
                     <ul class="list-unstyled">
-<%--
-                        <p>length:{{tmpdata.length}} , showALLAsks{{showALLAsks ? 'Y' : 'N' }}</p>
---%>
                         <li ng-repeat="askProblem in getDataAskProblem()">
                             <hr width="80%" color=#987cb9 SIZE=10 ng-show="$index > 0">
                             <div class="panel-body">
@@ -262,5 +259,7 @@
 
 <script src="/js/angular/angular.min.js"></script>
 <script src="/js/angular/app.js"></script>
+<script src="/js/angular/controllers.js"></script>
+<script src="/js/angular/services.js"></script>
 </body>
 </html>
