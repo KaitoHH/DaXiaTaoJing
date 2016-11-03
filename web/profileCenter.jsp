@@ -23,11 +23,8 @@
             <a name="questions">
                 <div class="panel panel-default">
                     <div class="panel-body">
-
                         <div class="col-lg-3">
-
                             <span class="zg-gray-normal">提问</span><br><br>
-
                         </div>
                         <div class="col-lg-6">
                         </div>
@@ -35,36 +32,77 @@
                             <a href="#"> 全部提问→</a>
                         </div>
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="col-lg-2">
-                                <div class="bs-component">
-                                    <div class="well well-sm">
-                                        123次<br>浏览
+                    <hr width="100%" color=#987cb9 SIZE=10 >
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="panel-body">
+                                <div class="col-lg-2">
+                                    <div class="bs-component">
+                                        <div class="well well-sm">
+                                            123次<br>浏览
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10">
+                                    <a href="#"> 二数余一,五数余二,七数余三,九数余四,问该数几何?</a><br>
+                                    来自学科：<a href="#" class="alert-link">离散数学 </a>
+                                    • 4个回答 • 8人关注 <a href="#" class="alert-link">取消关注</a>
+                                    <div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-10">
-                                <a href="#"> 二数余一,五数余二,七数余三,九数余四,问该数几何?</a><br>
-                                来自学科：<a href="#" class="alert-link">离散数学 </a>
-                                • 4个回答 • 8人关注 <a href="#" class="alert-link">取消关注</a>
-                                <div>
+                        </li>
+
+                        <hr width="80%" color=#987cb9 SIZE=10 >
+                        <li>
+                            <div class="panel-body">
+                                <div class="col-lg-2">
+                                    <div class="bs-component">
+                                        <div class="well well-sm">
+                                            123次<br>浏览
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10">
+                                    <a href="#"> 二数余一,五数余二,七数余三,九数余四,问该数几何?</a><br>
+                                    来自学科：<a href="#" class="alert-link">离散数学 </a>
+                                    • 4个回答 • 8人关注 <a href="#" class="alert-link">取消关注</a>
+                                    <div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+
+
+                        <hr width="80%" color=#987cb9 SIZE=10 >
+                        <li>
+                            <div class="panel-body">
+                                <div class="col-lg-2">
+                                    <div class="bs-component">
+                                        <div class="well well-sm">
+                                            123次<br>浏览
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10">
+                                    <a href="#"> 二数余一,五数余二,七数余三,九数余四,问该数几何?</a><br>
+                                    来自学科：<a href="#" class="alert-link">离散数学 </a>
+                                    • 4个回答 • 8人关注 <a href="#" class="alert-link">取消关注</a>
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </a>
-
+        
 
             <a name="answer">
                 <div class="panel panel-default">
                     <div class="panel-body">
-
                         <div class="col-lg-3">
-
                             <span class="zg-gray-normal">回答</span><br><br>
-
                         </div>
                         <div class="col-lg-6">
                         </div>
@@ -97,11 +135,8 @@
             <a name="agree">
                 <div class="panel panel-default">
                     <div class="panel-body">
-
                         <div class="col-lg-3">
-
                             <span class="zg-gray-normal">赞同</span><br><br>
-
                         </div>
                         <div class="col-lg-6">
                         </div>
@@ -133,11 +168,8 @@
             <a name="collection">
                 <div class="panel panel-default">
                     <div class="panel-body">
-
                         <div class="col-lg-3">
-
                             <span class="zg-gray-normal">收藏</span><br><br>
-
                         </div>
                         <div class="col-lg-6">
                         </div>
@@ -182,6 +214,7 @@
                         </div>
                     </div>
                 </div>
+
 
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingThree">
