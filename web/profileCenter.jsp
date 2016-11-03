@@ -29,13 +29,16 @@
                         </div>
                         <div class="col-lg-6">
                         </div>
-                        <div class="col-lg-3">
-                            <a href="#"> 全部提问→</a>
+                        <div class="col-lg-3" >
+                            <a ng-click="toggleShowALLAsks()"> {{ showALLAsks ? '缩小提问'  : '全部提问→ '}}</a>
                         </div>
                     </div>
                     <hr width="100%" color=#987cb9 SIZE=10 >
                     <ul class="list-unstyled">
-                        <li ng-repeat="askProblem in askProblems">
+<%--
+                        <p>length:{{tmpdata.length}} , showALLAsks{{showALLAsks ? 'Y' : 'N' }}</p>
+--%>
+                        <li ng-repeat="askProblem in getDataAskProblem()">
                             <hr width="80%" color=#987cb9 SIZE=10 ng-show="$index > 0">
                             <div class="panel-body">
                                 <div class="col-lg-2">
