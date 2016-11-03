@@ -58,6 +58,7 @@
         <filter-name>LoginCheck</filter-name>
         <url-pattern>/user/*</url-pattern>
         <url-pattern>/ask/*</url-pattern>
+        <url-pattern>/postQuestion.do</url-pattern>
     </filter-mapping>
 
 </web-app>

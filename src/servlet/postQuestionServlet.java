@@ -1,6 +1,7 @@
 package servlet;
 
 import Entity.Question;
+import Entity.User;
 import Entity.exception.QuestionValidateException;
 import database.QuestionDAO;
 
@@ -26,6 +27,7 @@ public class postQuestionServlet extends HttpServlet {
 		question.setTittle(req.getParameter("tittle"));
 		question.setqType(Integer.valueOf(req.getParameter("type")));
 		question.setContent(req.getParameter("content"));
+		question.setUserId(((User) req.getSession().getAttribute("user")).getId());
 		try {
 			question.setPay(Integer.valueOf(req.getParameter("pay")));
 		} catch (NumberFormatException e) {

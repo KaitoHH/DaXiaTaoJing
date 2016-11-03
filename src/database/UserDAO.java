@@ -2,6 +2,10 @@ package database;
 
 import Entity.User;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 /**
  * Project: DaXiaTaoJing
  * Author: KaitoHH
@@ -13,7 +17,28 @@ public class UserDAO implements IUserDAO {
 
 	@Override
 	public boolean insert(User user) {
-		return false;
+		Connection connection = Util.getConnection();
+		String sql = "INSERT INTO user(id,name,dept_name,gender,email) VALUES(?,?,?,?,?)";
+		try {
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, user.getId());
+			statement.setString(2, user.getName());
+			statement.setString(3, user.getDept());
+			statement.setInt(4, user.getGender());
+			statement.setString(5, user.getEmail());
+			statement.executeUpdate();
+			statement.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return true;
 	}
 
 	@Override

@@ -12,7 +12,7 @@ import java.sql.SQLException;
  * All rights reserved.
  */
 public class Util {
-	private static Connection getConnection() {
+	public static Connection getConnection() {
 		String driver = "com.mysql.jdbc.Driver";
 		String url = "jdbc:mysql://kaitohh.com:3306/daxiataojing";
 		String username = "root";

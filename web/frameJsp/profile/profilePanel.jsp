@@ -1,5 +1,3 @@
-<%@ page import="service.LoginService" %>
-<%@ page import="Entity.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="bs-docs-section">
     <div class="row profile panel">

@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html  ng-app="daxiataojingApp">
+<html ng-app="daxiataojingApp">
 <head>
     <%@include file="frameJsp/header.jsp" %>
     <title>大夏淘经</title>
@@ -21,7 +22,7 @@
 
     <div class="row">
         <div class="col-lg-6">
-            <a name="questions" >
+            <a name="questions">
                 <div class="panel panel-default" ng-controller="AskProblemsController">
                     <div class="panel-body">
                         <div class="col-lg-3">
@@ -29,11 +30,11 @@
                         </div>
                         <div class="col-lg-6">
                         </div>
-                        <div class="col-lg-3" >
-                            <a ng-click="toggleShowALLAsks()"> {{ showALLAsks ? '缩小提问'  : '全部提问→ '}}</a>
+                        <div class="col-lg-3">
+                            <a ng-click="toggleShowALLAsks()"> {{ showALLAsks ? '缩小提问' : '全部提问→ '}}</a>
                         </div>
                     </div>
-                    <hr width="100%" color=#987cb9 SIZE=10 >
+                    <hr width="100%" color=#987cb9 SIZE=10>
                     <ul class="list-unstyled">
                         <li ng-repeat="askProblem in getDataAskProblem()">
                             <hr width="80%" color=#987cb9 SIZE=10 ng-show="$index > 0">
@@ -48,7 +49,8 @@
                                 <div class="col-lg-10">
                                     <a href="#"> {{askProblem.title}}</a><br>
                                     来自学科：<a href="#" class="alert-link">{{askProblem.subject}} </a>
-                                    • {{askProblem.numberOfAnswers}}个回答 • {{askProblem.numberOfFollowers}}人关注 <a href="#" class="alert-link">取消关注</a>
+                                    • {{askProblem.numberOfAnswers}}个回答 • {{askProblem.numberOfFollowers}}人关注 <a
+                                        href="#" class="alert-link">取消关注</a>
                                     <div>
                                     </div>
                                 </div>
@@ -57,7 +59,7 @@
                     </ul>
                 </div>
             </a>
-        
+
 
             <a name="answer">
                 <div class="panel panel-default">
@@ -254,8 +256,8 @@
     </div>
 </div>
 
-    <%--在此位置以上结束代码--%>
-    <%@include file="frameJsp/footer.jsp" %>
+<%--在此位置以上结束代码--%>
+<%@include file="frameJsp/footer.jsp" %>
 
 <script src="/js/angular/angular.min.js"></script>
 <script src="/js/angular/app.js"></script>
