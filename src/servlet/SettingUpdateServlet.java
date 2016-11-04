@@ -17,7 +17,7 @@ import java.io.PrintWriter;
  * Description:
  * All rights reserved.
  */
-public class settingUpdateServlet extends HttpServlet {
+public class SettingUpdateServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		User user = (User) req.getSession().getAttribute("user");

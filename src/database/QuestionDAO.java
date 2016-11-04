@@ -4,7 +4,10 @@ import Entity.Question;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Project: DaXiaTaoJing
@@ -52,7 +55,38 @@ public class QuestionDAO implements IQuestionDAO {
 	}
 
 	@Override
-	public Question select(String id) {
+	public Question select(int id) {
 		return null;
+	}
+
+	@Override
+	public List<Question> getList() {
+		List<Question> list = new ArrayList();
+		Connection connection = Util.getConnection();
+		String sql = "SELECT * FROM question";
+		try {
+			PreparedStatement statement = connection.prepareStatement(sql);
+			ResultSet set = statement.executeQuery();
+			while (set.next()) {
+				Question question = new Question();
+				question.setTittle(set.getString("tittle"));
+				question.setqType(set.getInt("type"));
+				question.setContent(set.getString("content"));
+				question.setPay(set.getInt("pay"));
+				question.setUserId(set.getString("userId"));
+				list.add(question);
+			}
+			statement.close();
+			return list;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 }

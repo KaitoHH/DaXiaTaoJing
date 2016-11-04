@@ -2,6 +2,8 @@ package database;
 
 import Entity.Question;
 
+import java.util.List;
+
 /**
  * Project: DaXiaTaoJing
  * Author: KaitoHH
@@ -16,5 +18,7 @@ public interface IQuestionDAO {
 
 	public boolean update(Question question);
 
-	public Question select(String id);
+	public Question select(int id);
+
+	public List<Question> getList();
 }

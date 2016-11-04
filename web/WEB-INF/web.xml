@@ -25,9 +25,12 @@
     </servlet>
     <servlet>
         <servlet-name>SettingUpdateServlet</servlet-name>
-        <servlet-class>servlet.settingUpdateServlet</servlet-class>
+        <servlet-class>servlet.SettingUpdateServlet</servlet-class>
     </servlet>
-
+    <servlet>
+        <servlet-name>PubQListServlet</servlet-name>
+        <servlet-class>servlet.PubQListServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -57,7 +60,10 @@
         <servlet-name>SettingUpdateServlet</servlet-name>
         <url-pattern>/updateProfile.do</url-pattern>
     </servlet-mapping>
-
+    <servlet-mapping>
+        <servlet-name>PubQListServlet</servlet-name>
+        <url-pattern>/question</url-pattern>
+    </servlet-mapping>
 
     <filter>
         <filter-name>LoginCheck</filter-name>
