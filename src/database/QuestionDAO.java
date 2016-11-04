@@ -57,16 +57,42 @@ public class QuestionDAO implements IQuestionDAO {
 
 	@Override
 	public Question select(int id) {
-		return null;
+		Question question = null;
+		Connection connection = Util.getConnection();
+		String sql = "SELECT * FROM question WHERE id = ?";
+		try {
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(1, id);
+			ResultSet set = statement.executeQuery();
+			if (set.next()) {
+				question = new Question();
+				question.setTittle(set.getString("tittle"));
+				question.setqType(set.getInt("type"));
+				question.setContent(set.getString("content"));
+				question.setPay(set.getInt("pay"));
+				question.setUserId(set.getString("userId"));
+			}
+			statement.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return question;
 	}
 
 	@Override
-	public List<Question> getList() {
+	public List<Question> getList(int type) {
 		List<Question> list = new ArrayList();
 		Connection connection = Util.getConnection();
-		String sql = "SELECT * FROM question";
+		String sql = "SELECT * FROM question WHERE type = ?";
 		try {
 			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(1, type);
 			ResultSet set = statement.executeQuery();
 			while (set.next()) {
 				Question question = new Question();

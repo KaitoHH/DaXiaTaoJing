@@ -2762,7 +2762,7 @@ a.list-group-item-danger.active:focus {
 }
 .bg_blur
 {
-    background-image:url('http://lorempixel.com/500/500/nature/2/');
+    background-image:url('/imgs/profileBackground.jpg');
     height: 300px;
     background-size: cover;
 }

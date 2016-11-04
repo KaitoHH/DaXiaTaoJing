@@ -31,6 +31,10 @@
         <servlet-name>PubQListServlet</servlet-name>
         <servlet-class>servlet.PubQListServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PublicQuestionServlet</servlet-name>
+        <servlet-class>servlet.PublicQuestionServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>PubQListServlet</servlet-name>
         <url-pattern>/question</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PublicQuestionServlet</servlet-name>
+        <url-pattern>/pq/*</url-pattern>
     </servlet-mapping>
 
     <filter>

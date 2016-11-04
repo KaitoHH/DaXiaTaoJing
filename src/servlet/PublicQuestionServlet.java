@@ -1,14 +1,13 @@
 package servlet;
 
-import entity.Question;
 import database.QuestionDAO;
+import entity.Question;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Project: DaXiaTaoJing
@@ -17,11 +16,21 @@ import java.util.List;
  * Description:
  * All rights reserved.
  */
-public class PubQListServlet extends HttpServlet {
+public class PublicQuestionServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Question> list = new QuestionDAO().getList(1);
-		req.getSession().setAttribute("qlist", list);
-		req.getRequestDispatcher("/pubList.jsp").forward(req, resp);
+		String url = req.getRequestURI();
+		url = url.substring(4);
+		int qid = 0;
+		Question question = null;
+		try {
+			qid = Integer.valueOf(url);
+			question = new QuestionDAO().select(qid);
+		} catch (NumberFormatException e) {
+		}
+		if (qid != 0 && question != null) {
+			req.getSession().setAttribute("question", question);
+			req.getRequestDispatcher("/question.jsp").forward(req, resp);
+		}
 	}
 }
