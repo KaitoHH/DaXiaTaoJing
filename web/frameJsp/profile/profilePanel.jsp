@@ -10,7 +10,7 @@
             <div class="header">
                 <h2>${user.name}</h2>
                 <h4>${user.dept}</h4>
-                <span>为什么，我如此地，机智。</span>
+                <span>${user.introduction}</span>
             </div>
 
             <div class="btn-group btn-block">

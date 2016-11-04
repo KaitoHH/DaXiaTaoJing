@@ -23,6 +23,11 @@
         <servlet-name>PostQuestionServlet</servlet-name>
         <servlet-class>servlet.postQuestionServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SettingUpdateServlet</servlet-name>
+        <servlet-class>servlet.settingUpdateServlet</servlet-class>
+    </servlet>
+
 
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -47,6 +52,10 @@
     <servlet-mapping>
         <servlet-name>PostQuestionServlet</servlet-name>
         <url-pattern>/postQuestion.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SettingUpdateServlet</servlet-name>
+        <url-pattern>/updateProfile.do</url-pattern>
     </servlet-mapping>
 
 
