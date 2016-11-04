@@ -31,8 +31,10 @@
 
     <div class="col-xs-12 col-sm-8">
 
-        <h1 id="sbuttons"><a class="btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> 千金悬赏&nbsp;&nbsp;&nbsp;&nbsp;
-        </h1>
+        <div class="page-header">
+            <h1 id="sbuttons"><a class="btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> 千金悬赏&nbsp;&nbsp;&nbsp;&nbsp;
+            </h1>
+        </div>
 
 
 
@@ -79,21 +81,21 @@
 
                         <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
 
-                        <div style="margin-left: 20px;margin-top: 40px">
-                            <ul class="pagination">
-                                <li><a href="#">&laquo;</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li class="disabled"><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">&raquo;</a></li>
-                            </ul>
-                        </div>
                     </li>
 
 
                 </ul>
+                <div style="margin-left: 20px;margin-top: 40px">
+                    <ul class="pagination">
+                        <li><a href="#">&laquo;</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li class="disabled"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
 
 
 
