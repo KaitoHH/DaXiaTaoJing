@@ -1,6 +1,6 @@
 package servlet;
 
-import Entity.Question;
+import entity.Question;
 import database.QuestionDAO;
 
 import javax.servlet.ServletException;

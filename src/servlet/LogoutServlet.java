@@ -1,8 +1,7 @@
 package servlet;
 
 
-import Entity.User;
-import service.LoginService;
+import entity.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

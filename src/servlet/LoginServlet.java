@@ -1,6 +1,6 @@
 package servlet;
 
-import Entity.User;
+import entity.User;
 import database.UserDAO;
 import org.json.JSONObject;
 import service.LoginService;
