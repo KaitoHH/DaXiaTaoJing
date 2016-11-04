@@ -14,7 +14,7 @@ import java.sql.SQLException;
 public class Util {
 	public static Connection getConnection() {
 		String driver = "com.mysql.jdbc.Driver";
-		String url = "jdbc:mysql://kaitohh.com:3306/daxiataojing";
+		String url = "jdbc:mysql://kaitohh.com:3306/daxiataojing?useSSL=false";
 		String username = "root";
 		String password = "zhao.ren.admin";
 		Connection conn = null;

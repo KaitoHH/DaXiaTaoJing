@@ -12,7 +12,7 @@ import java.util.List;
  * All rights reserved.
  */
 public interface IQuestionDAO {
-	public boolean insert(Question question);
+	public int insert(Question question);
 
 	public boolean delete(Question question);
 

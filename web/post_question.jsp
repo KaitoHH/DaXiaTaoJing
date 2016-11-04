@@ -106,7 +106,7 @@
                                     <div class="panel-heading">
                                         <h3 class="panel-title">成功</h3>
                                     </div>
-                                    <div class="panel-body">发布成功！</div>
+                                    <div class="panel-body">发布成功！3秒后跳转至问题页面</div>
                                 </div>
                             </div>
                         </div>

@@ -16,9 +16,10 @@ import java.util.List;
 public class QuestionDAO implements IQuestionDAO {
 
 	@Override
-	public boolean insert(Question question) {
+	public int insert(Question question) {
 		Connection connection = Util.getConnection();
 		String sql = "INSERT INTO question(tittle,type,content,pay,userId) VALUES(?,?,?,?,?)";
+		int qid = 0;
 		try {
 			PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			statement.setString(1, question.getTittle());
@@ -29,12 +30,11 @@ public class QuestionDAO implements IQuestionDAO {
 			statement.executeUpdate();
 			ResultSet keys = statement.getGeneratedKeys();
 			keys.next();
-			int qid = keys.getInt(1);
+			qid = keys.getInt(1);
 			new TagDAO().insertRelation(qid, question.getTag());
 			statement.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return false;
 		} finally {
 			try {
 				connection.close();
@@ -42,7 +42,7 @@ public class QuestionDAO implements IQuestionDAO {
 				e.printStackTrace();
 			}
 		}
-		return true;
+		return qid;
 	}
 
 	@Override
@@ -75,7 +75,7 @@ public class QuestionDAO implements IQuestionDAO {
 			statement.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			try {
 				connection.close();
 			} catch (SQLException e) {

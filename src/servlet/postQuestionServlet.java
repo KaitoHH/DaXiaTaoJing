@@ -4,6 +4,7 @@ import entity.Question;
 import entity.User;
 import entity.exception.QuestionValidateException;
 import database.QuestionDAO;
+import org.json.JSONObject;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -40,12 +41,19 @@ public class postQuestionServlet extends HttpServlet {
 		} catch (QuestionValidateException e) {
 			msg = e.getMessage();
 		}
+		int qid = new QuestionDAO().insert(question);
+
+
 		resp.setCharacterEncoding("utf-8");
+		resp.setContentType("application/json");
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.append("msg", msg);
+		jsonObject.append("id", qid);
 		PrintWriter out = resp.getWriter();
-		out.print(msg);
+		out.print(jsonObject);
 		out.flush();
 		out.close();
 
-		new QuestionDAO().insert(question);
+
 	}
 }
