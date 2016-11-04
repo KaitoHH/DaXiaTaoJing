@@ -1,0 +1,21 @@
+package database;
+
+import entity.Tag;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * Project: DaXiaTaoJing
+ * Author: KaitoHH
+ * Create Date: 2016/11/4
+ * Description:
+ * All rights reserved.
+ */
+public interface ITagDAO {
+	int insert(Tag tag);
+
+	int select(String name);
+
+	boolean insertRelation(int qid, Set<String> set);
+}

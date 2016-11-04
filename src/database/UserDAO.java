@@ -1,6 +1,6 @@
 package database;
 
-import Entity.User;
+import entity.User;
 
 import java.sql.*;
 

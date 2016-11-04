@@ -1,6 +1,6 @@
 package database;
 
-import Entity.Question;
+import entity.Question;
 
 import java.util.List;
 

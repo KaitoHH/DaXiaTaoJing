@@ -1,6 +1,6 @@
-package Entity;
+package entity;
 
-import Entity.exception.QuestionValidateException;
+import entity.exception.QuestionValidateException;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -66,6 +66,10 @@ public class Question {
 		for (int i = 0; i < stag.length; i++) {
 			tag.add(stag[i]);
 		}
+	}
+
+	public Set<String> getTag() {
+		return tag;
 	}
 
 	public String getUserId() {

@@ -1,11 +1,8 @@
 package database;
 
-import Entity.Question;
+import entity.Question;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,13 +20,17 @@ public class QuestionDAO implements IQuestionDAO {
 		Connection connection = Util.getConnection();
 		String sql = "INSERT INTO question(tittle,type,content,pay,userId) VALUES(?,?,?,?,?)";
 		try {
-			PreparedStatement statement = connection.prepareStatement(sql);
+			PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			statement.setString(1, question.getTittle());
 			statement.setInt(2, question.getqType());
 			statement.setString(3, question.getContent());
 			statement.setInt(4, question.getPay());
 			statement.setString(5, question.getUserId());
 			statement.executeUpdate();
+			ResultSet keys = statement.getGeneratedKeys();
+			keys.next();
+			int qid = keys.getInt(1);
+			new TagDAO().insertRelation(qid, question.getTag());
 			statement.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -81,7 +82,7 @@ public class QuestionDAO implements IQuestionDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return null;
-		}finally {
+		} finally {
 			try {
 				connection.close();
 			} catch (SQLException e) {

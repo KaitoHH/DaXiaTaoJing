@@ -1,6 +1,6 @@
 package filter;
 
-import Entity.User;
+import entity.User;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

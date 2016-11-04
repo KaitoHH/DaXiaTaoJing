@@ -1,8 +1,8 @@
 package servlet;
 
-import Entity.Question;
-import Entity.User;
-import Entity.exception.QuestionValidateException;
+import entity.Question;
+import entity.User;
+import entity.exception.QuestionValidateException;
 import database.QuestionDAO;
 
 import javax.servlet.ServletException;
