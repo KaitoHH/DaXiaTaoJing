@@ -31,75 +31,253 @@
 
     <div class="col-xs-12 col-sm-8">
 
-        <div class="page-header">
-            <h1 id="sbuttons"><a class="btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> 千金悬赏&nbsp;&nbsp;&nbsp;&nbsp;
-            </h1>
-        </div>
+        <h1 id="sbuttons"><a class="btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> 千金悬赏&nbsp;&nbsp;&nbsp;&nbsp;
+        </h1>
 
 
 
         <div >
             <div class="bs-component">
-                <ul class="list-group">
-                    <li href="#" class="list-group-item">
-                        <h3 class="list-group-item-heading"><a href="question.jsp">高等数学怎么学？</a><br/><small>提问者: 米老鼠</small></h3>
-
-                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
-                    </li>
-                    <li href="#" class="list-group-item">
-                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
-
-                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
-                    </li>
-                    <li href="#" class="list-group-item">
-                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
-
-                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
-                    </li>
-                    <li href="#" class="list-group-item">
-                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
-
-                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
-                    </li>
-                    <li href="#" class="list-group-item">
-                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
-
-                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
-                    </li>
-                    <li href="#" class="list-group-item">
-                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
-
-                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
-                    </li>
-                    <li href="#" class="list-group-item">
-                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
-
-                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
-                    </li>
-                    <li href="#" class="list-group-item">
-                        <h3 class="list-group-item-heading">高等数学怎么学？<br/><small>提问者: 米老鼠</small></h3>
-
-                        <p class="list-group-item-text">啊 高等数学真是一个神奇的学科 摊手摊手摊手</p>
-
-                    </li>
-
-
+                <ul class="nav nav-tabs">
+                    <li class="active"><a aria-expanded="true" href="#arts" data-toggle="tab">文科</a></li>
+                    <li class="action"><a aria-expanded="true" href="#sciences" data-toggle="tab">理科</a></li>
+                    <li class="activity"><a aria-expanded="true" href="#engineer" data-toggle="tab">工科</a></li>
+                    <li class="actively"><a aria-expanded="true" href="#others" data-toggle="tab">其他</a></li>
                 </ul>
-                <div style="margin-left: 20px;margin-top: 40px">
-                    <ul class="pagination">
-                        <li><a href="#">&laquo;</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li class="disabled"><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="arts">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="">
+                                            热门问题
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading" aria-expanded="true" style="">
+                                    <div class="panel-body">
+                                        <div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#" style="font-size:15px">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">计算机科学概论</a>
+                                                    • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">概率论 </a>
+                                                    • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">计算机科学概论</a>
+                                                    • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">概率论 </a>
+                                                    • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        <a href="#" class="btn btn-success">更多</a>
+                        </div>
+
+
+
+                    <div class="tab-pane fade action in" id="sciences">
+                        <div class="panel-group" id="accordiontwo" role="tablist" aria-multiselectable="true">
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingFour">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="">
+                                            热门问题
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour" aria-expanded="true" style="">
+                                    <div class="panel-body">
+                                        <div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#" style="font-size:15px">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">计算机科学概论</a>
+                                                    • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">概率论 </a>
+                                                    • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">计算机科学概论</a>
+                                                    • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">概率论 </a>
+                                                    • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-success">更多</a>
+                    </div>
+                    <div class="tab-pane fade activity in" id="engineer">
+                        <div class="panel-group" id="accordionthree" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingsix">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordionthree" href="#collapsesix" aria-expanded="true" aria-controls="collapsesix" class="">
+                                            热门问题
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapsesix" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingsix" aria-expanded="true" style="">
+                                    <div class="panel-body">
+                                        <div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#" style="font-size:15px">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">计算机科学概论</a>
+                                                    • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">概率论 </a>
+                                                    • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">计算机科学概论</a>
+                                                    • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">概率论 </a>
+                                                    • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-success">更多</a>
+                    </div>
+                    <div class="tab-pane fade actively in" id="others">
+                        <div class="panel-group" id="accordionfour" role="tablist" aria-multiselectable="true">
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingeight">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordionfour" href="#collapseeight" aria-expanded="true" aria-controls="collapseeight" class="">
+                                            热门问题
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseight" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingeight" aria-expanded="true" style="">
+                                    <div class="panel-body">
+                                        <div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">计算机科学概论</a>
+                                                    • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">概率论 </a>
+                                                    • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">计算机科学概论</a>
+                                                    • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
+                                                </div>
+                                                <div class="panel-body">
+                                                    来自学科：<a href="#" class="alert-link">概率论 </a>
+                                                    • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-success">更多</a>
+                    </div>
                 </div>
-
-
-
             </div>
+
         </div>
 
 
