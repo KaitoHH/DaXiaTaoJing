@@ -19,6 +19,7 @@ public class Question {
 	String content;
 	private int pay;
 	private String userId;
+	private String puserId;
 	private Set<String> tag = new HashSet();
 
 	public int getId() {
@@ -82,6 +83,14 @@ public class Question {
 
 	public void setUserId(String userId) {
 		this.userId = userId;
+	}
+
+	public String getPuserId() {
+		return puserId;
+	}
+
+	public void setPuserId(String puserId) {
+		this.puserId = puserId;
 	}
 
 	public void validate() throws QuestionValidateException {

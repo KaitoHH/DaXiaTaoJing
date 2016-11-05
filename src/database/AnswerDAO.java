@@ -64,7 +64,7 @@ public class AnswerDAO implements IAnswerDAO {
 	public List<Answer> getList(int qid) {
 		List<Answer> answers = new ArrayList();
 		Connection connection = Util.getConnection();
-		String sql = "SELECT * FROM answer WHERE qId = ?";
+		String sql = "SELECT * FROM answer WHERE qId = ? ORDER BY id";
 		try {
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(1, qid);

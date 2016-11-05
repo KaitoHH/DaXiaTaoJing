@@ -3,7 +3,7 @@ $(document).ready(function () {
         success: function (data) {
             if (data.msg.length > 1) {
                 $("#responseDiv").removeClass("hidden");
-                $("#questionResponse").text(data);
+                $("#questionResponse").text(data.msg);
             } else {
                 $("#successDiv").removeClass("hidden");
                 $("#responseDiv").addClass("hidden");

@@ -27,9 +27,14 @@ public class AnswerServlet extends HttpServlet {
 		answer.setUserId(((User) req.getSession().getAttribute("user")).getId());
 		answer.setContent(req.getParameter("answerArea"));
 		answer.setAnonymous(req.getParameter("anonymous").equals("1") ? 1 : 0);
-		new AnswerDAO().insert(answer);
+		String msg = "0";
+		if (answer.getContent() == "") {
+			msg = "error";
+		} else {
+			new AnswerDAO().insert(answer);
+		}
 		PrintWriter out = resp.getWriter();
-		out.print(0);
+		out.print(msg);
 		out.flush();
 		out.close();
 	}

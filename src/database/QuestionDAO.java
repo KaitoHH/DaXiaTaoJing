@@ -18,7 +18,7 @@ public class QuestionDAO implements IQuestionDAO {
 	@Override
 	public int insert(Question question) {
 		Connection connection = Util.getConnection();
-		String sql = "INSERT INTO question(tittle,type,content,pay,userId) VALUES(?,?,?,?,?)";
+		String sql = "INSERT INTO question(tittle,type,content,pay,userId,puserId) VALUES(?,?,?,?,?,?)";
 		int qid = 0;
 		try {
 			PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -27,6 +27,7 @@ public class QuestionDAO implements IQuestionDAO {
 			statement.setString(3, question.getContent());
 			statement.setInt(4, question.getPay());
 			statement.setString(5, question.getUserId());
+			statement.setString(6, question.getPuserId());
 			statement.executeUpdate();
 			ResultSet keys = statement.getGeneratedKeys();
 			keys.next();
@@ -91,7 +92,7 @@ public class QuestionDAO implements IQuestionDAO {
 	public List<Question> getList(int type) {
 		List<Question> list = new ArrayList();
 		Connection connection = Util.getConnection();
-		String sql = "SELECT * FROM question WHERE type = ?";
+		String sql = "SELECT * FROM question WHERE type = ? AND puserId = \"\"";
 		System.out.println(sql);
 		try {
 			PreparedStatement statement = connection.prepareStatement(sql);
