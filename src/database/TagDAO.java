@@ -106,6 +106,7 @@ public class TagDAO implements ITagDAO {
 		Set<String> set = new HashSet();
 		Connection connection = Util.getConnection();
 		String sql = "SELECT tagId FROM question_tag WHERE qid = ?";
+		System.out.println(sql);
 		try {
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(1, qid);

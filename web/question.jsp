@@ -10,30 +10,19 @@
 
 <%@include file="frameJsp/navbar.jsp" %>
 
-
 <div class="container">
-
-
     <div class="page-header" id="banner">
-
-
         <div class="panel panel-default">
             <div class="panel-body">
-
                 <div>
                     <c:forEach var="tag" items="${question.tag}">
                         <button type="button" class="btn btn-default">${tag}</button>
                     </c:forEach>
                 </div>
-
-
                 <h1>${question.tittle}</h1>
-
                 <div>${question.content}</div>
                 <br/>
-
                 <button class="btn btn-success btn-lg">悬赏积分：${question.pay}</button>
-
                 <a href="#answer" class="btn btn-primary btn-lg" data-toggle="popover" title="Popover title"
                    data-content="回答问题">回答问题</a>
             </div>
@@ -44,27 +33,21 @@
             <div class="panel-body">
 
                 <h2>最佳答案</h2><img src="/imgs/me.jpg" class="img-circle" alt="image" style="width:50px;height:50px;">
-                <a class="author-link" href="">米老鼠</a><br/>
-                <div>关于问题具体的回答：数字逻辑怎么学呢,认真学。</div>
+                <a class="author-link" href="">${answers[0].anonymous==0?answers[0].userName:"匿名用户"}</a><br/>
+                <div>${answers[0].content}</div>
             </div>
         </div>
-
 
         <div class="panel panel-default">
             <div class="panel-body">
 
                 <h2>其他答案</h2>
-                <a class="author-link" href=""> 饿米</a><br/>
-                <div>好难呀</div>
-                <br/>
+                <c:forEach var="curans" items="${answers}" begin="1">
+                    <a class="author-link" href="">${curans.anonymous==0?curans.userName:"匿名用户"}</a><br/>
+                    <div>${curans.content}</div>
+                    <br/>
+                </c:forEach>
 
-                <a class="author-link" href=""> 分米</a><br/>
-                <div>数字逻辑怎么学呢。。。。</div>
-                <br/>
-
-                <a class="author-link" href=""> 里米</a><br/>
-                <div>微笑</div>
-                <br/>
             </div>
         </div>
 

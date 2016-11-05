@@ -92,6 +92,7 @@ public class QuestionDAO implements IQuestionDAO {
 		List<Question> list = new ArrayList();
 		Connection connection = Util.getConnection();
 		String sql = "SELECT * FROM question WHERE type = ?";
+		System.out.println(sql);
 		try {
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(1, type);
@@ -100,10 +101,10 @@ public class QuestionDAO implements IQuestionDAO {
 				Question question = new Question();
 				question.setId(set.getInt("id"));
 				question.setTittle(set.getString("tittle"));
-				question.setqType(set.getInt("type"));
-				question.setContent(set.getString("content"));
+				//question.setqType(set.getInt("type"));
+				//question.setContent(set.getString("content"));
 				question.setPay(set.getInt("pay"));
-				question.setUserId(set.getString("userId"));
+				//question.setUserId(set.getString("userId"));
 				question.setTag(new TagDAO().getAllTag(question.getId()));
 				list.add(question);
 			}

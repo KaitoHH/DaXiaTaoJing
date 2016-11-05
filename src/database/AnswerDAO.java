@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -61,6 +62,31 @@ public class AnswerDAO implements IAnswerDAO {
 
 	@Override
 	public List<Answer> getList(int qid) {
-		return null;
+		List<Answer> answers = new ArrayList();
+		Connection connection = Util.getConnection();
+		String sql = "SELECT * FROM answer WHERE qId = ?";
+		try {
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(1, qid);
+			ResultSet set = statement.executeQuery();
+			while (set.next()) {
+				Answer answer = new Answer();
+				answer.setUserId(set.getString("userId"));
+				answer.setContent(set.getString("content"));
+				answer.setAnonymous(set.getInt("anonymous"));
+				answer.setUserName(new UserDAO().select(answer.getUserId()).getName());
+				answers.add(answer);
+			}
+			statement.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return answers;
 	}
 }

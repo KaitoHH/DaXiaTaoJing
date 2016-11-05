@@ -12,6 +12,7 @@ public class Answer {
 	private String content;
 	private int qid;
 	private int anonymous;
+	private String userName;
 
 	public String getUserId() {
 		return userId;
@@ -43,5 +44,13 @@ public class Answer {
 
 	public void setAnonymous(int anonymous) {
 		this.anonymous = anonymous;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 }
