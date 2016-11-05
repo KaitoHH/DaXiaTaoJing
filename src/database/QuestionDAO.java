@@ -15,6 +15,8 @@ import java.util.List;
  */
 public class QuestionDAO implements IQuestionDAO {
 
+	boolean containTag;
+
 	@Override
 	public int insert(Question question) {
 		Connection connection = Util.getConnection();
@@ -90,6 +92,7 @@ public class QuestionDAO implements IQuestionDAO {
 
 	@Override
 	public List<Question> getList(int type) {
+		containTag = true;
 		List<Question> list = new ArrayList();
 		Connection connection = Util.getConnection();
 		String sql = "SELECT * FROM question WHERE type = ? AND puserId = \"\"";
@@ -139,7 +142,8 @@ public class QuestionDAO implements IQuestionDAO {
 			//question.setContent(set.getString("content"));
 			question.setPay(set.getInt("pay"));
 			//question.setUserId(set.getString("userId"));
-			question.setTag(new TagDAO().getAllTag(question.getId()));
+			if (containTag)
+				question.setTag(new TagDAO().getAllTag(question.getId()));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -147,6 +151,7 @@ public class QuestionDAO implements IQuestionDAO {
 	}
 
 	private List<Question> getUserList(String sql, String userId) {
+		containTag = false;
 		List<Question> list = new ArrayList();
 		Connection connection = Util.getConnection();
 		try {

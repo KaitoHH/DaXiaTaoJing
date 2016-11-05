@@ -38,10 +38,13 @@ public class ProfileAskListServlet extends HttpServlet {
 			q.put("numberOfFollowers", 4);
 			array.put(q);
 		}
+		JSONObject object = new JSONObject();
+		object.put("data", array);
+		object.put("length", new QuestionDAO().getAskListCount(((User) req.getSession().getAttribute("curUser")).getId()));
 		resp.setContentType("application/json");
 		resp.setCharacterEncoding("utf-8");
 		PrintWriter out = resp.getWriter();
-		out.print(array);
+		out.print(object);
 		out.flush();
 		out.close();
 	}
