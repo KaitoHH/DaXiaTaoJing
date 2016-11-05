@@ -26,6 +26,21 @@
                 <button class="btn btn-success btn-lg">悬赏积分：${question.pay}</button>
                 <a href="#answer" class="btn btn-primary btn-lg" data-toggle="popover" title="Popover title"
                    data-content="回答问题">回答问题</a>
+                <br/>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2">
+                    <div class="btn-toolbar" role="toolbar">
+                        <div class="btn-group" data-toggle="buttons">
+                            <p class="bs-component">
+                                <a href="#" class="btn btn-primary btn-xs active">关注</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -41,6 +56,20 @@
                     <img src="/imgs/me.jpg" class="img-circle" alt="image" style="width:50px;height:50px;">
                     <a class="author-link" href="">${answers[0].anonymous==0?answers[0].userName:"匿名用户"}</a><br/>
                     <div>${answers[0].content}</div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2">
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group" data-toggle="buttons">
+                                <p class="bs-component">
+                                    <a href="#" class="btn btn-primary btn-xs active">点赞(135)</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </c:if>
             </div>
         </div>
@@ -55,6 +84,20 @@
                     <a class="author-link" href="">${curans.anonymous==0?curans.userName:"匿名用户"}</a><br/>
                     <div>${curans.content}</div>
                     <br/>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2">
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group" data-toggle="buttons">
+                                <p class="bs-component">
+                                    <a href="#" class="btn btn-primary btn-xs active">点赞(135)</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </c:forEach>
 
             </div>
