@@ -68,6 +68,10 @@ public class Question {
 		}
 	}
 
+	public void setTag(Set<String> tag) {
+		this.tag = tag;
+	}
+
 	public Set<String> getTag() {
 		return tag;
 	}

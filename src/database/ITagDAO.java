@@ -15,7 +15,11 @@ import java.util.Set;
 public interface ITagDAO {
 	int insert(Tag tag);
 
+	Tag select(int id);
+
 	int select(String name);
+
+	Set<String> getAllTag(int qid);
 
 	boolean insertRelation(int qid, Set<String> set);
 }

@@ -20,8 +20,9 @@ import java.util.List;
 public class PubQListServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Question> list = new QuestionDAO().getList(1);
-		req.getSession().setAttribute("qlist", list);
+		for (int i = 1; i <= 4; i++) {
+			req.getSession().setAttribute("qlist" + i, new QuestionDAO().getList(i));
+		}
 		req.getRequestDispatcher("/pubList.jsp").forward(req, resp);
 	}
 }

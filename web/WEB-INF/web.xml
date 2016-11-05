@@ -35,6 +35,10 @@
         <servlet-name>PublicQuestionServlet</servlet-name>
         <servlet-class>servlet.PublicQuestionServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AnswerServlet</servlet-name>
+        <servlet-class>servlet.AnswerServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -72,6 +76,10 @@
         <servlet-name>PublicQuestionServlet</servlet-name>
         <url-pattern>/pq/*</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AnswerServlet</servlet-name>
+        <url-pattern>/postAnswer.do</url-pattern>
+    </servlet-mapping>
 
     <filter>
         <filter-name>LoginCheck</filter-name>
@@ -82,6 +90,7 @@
         <url-pattern>/user/*</url-pattern>
         <url-pattern>/ask/*</url-pattern>
         <url-pattern>/postQuestion.do</url-pattern>
+        <url-pattern>/postAnswer.do</url-pattern>
     </filter-mapping>
 
 </web-app>

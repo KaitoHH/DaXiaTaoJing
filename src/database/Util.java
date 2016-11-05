@@ -16,7 +16,7 @@ public class Util {
 		String driver = "com.mysql.jdbc.Driver";
 		String url = "jdbc:mysql://kaitohh.com:3306/daxiataojing?useSSL=false";
 		String username = "root";
-		String password = "zhao.ren.admin";
+		String password = "Dax1a";
 		Connection conn = null;
 		try {
 			Class.forName(driver);

@@ -63,6 +63,31 @@ public class TagDAO implements ITagDAO {
 	}
 
 	@Override
+	public Tag select(int id) {
+		Tag tag = new Tag();
+		Connection connection = Util.getConnection();
+		String sql = "SELECT * FROM tag WHERE id = ?";
+		try {
+			PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+			statement.setInt(1, id);
+			ResultSet set = statement.executeQuery();
+			set.next();
+			tag.setId(set.getInt(1));
+			tag.setName(set.getString(2));
+			statement.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return tag;
+	}
+
+	@Override
 	public boolean insertRelation(int qid, Set<String> set) {
 		for (String tagName : set) {
 			int tid = select(tagName);
@@ -74,6 +99,32 @@ public class TagDAO implements ITagDAO {
 			insertQuestionTag(qid, tid);
 		}
 		return true;
+	}
+
+	@Override
+	public Set<String> getAllTag(int qid) {
+		Set<String> set = new HashSet();
+		Connection connection = Util.getConnection();
+		String sql = "SELECT tagId FROM question_tag WHERE qid = ?";
+		try {
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(1, qid);
+			ResultSet rs = statement.executeQuery();
+			while (rs.next()) {
+				int tid = rs.getInt(1);
+				set.add(select(tid).getName());
+			}
+			statement.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return set;
 	}
 
 	public void insertQuestionTag(int qid, int tid) {

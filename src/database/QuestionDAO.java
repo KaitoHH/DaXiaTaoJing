@@ -66,11 +66,13 @@ public class QuestionDAO implements IQuestionDAO {
 			ResultSet set = statement.executeQuery();
 			if (set.next()) {
 				question = new Question();
+				question.setId(set.getInt("id"));
 				question.setTittle(set.getString("tittle"));
 				question.setqType(set.getInt("type"));
 				question.setContent(set.getString("content"));
 				question.setPay(set.getInt("pay"));
 				question.setUserId(set.getString("userId"));
+				question.setTag(new TagDAO().getAllTag(question.getId()));
 			}
 			statement.close();
 		} catch (SQLException e) {
@@ -96,11 +98,13 @@ public class QuestionDAO implements IQuestionDAO {
 			ResultSet set = statement.executeQuery();
 			while (set.next()) {
 				Question question = new Question();
+				question.setId(set.getInt("id"));
 				question.setTittle(set.getString("tittle"));
 				question.setqType(set.getInt("type"));
 				question.setContent(set.getString("content"));
 				question.setPay(set.getInt("pay"));
 				question.setUserId(set.getString("userId"));
+				question.setTag(new TagDAO().getAllTag(question.getId()));
 				list.add(question);
 			}
 			statement.close();
