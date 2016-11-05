@@ -70,7 +70,9 @@
                                 </ul>
 
                                 <div style="text-align:right;">
-                                    <button type="button"  ng-disabled="!canLoadMore" class=" btn btn-primary" ng-click="loadPage()">更多</button>
+                                    <button type="button" ng-disabled="!canLoadMore" class=" btn btn-primary"
+                                            ng-click="loadPage()">更多
+                                    </button>
                                     <!--  <div class="col-lg-3">
                                         <span class="zg-gray-normal">提问</span><br><br>
                                     </div>
@@ -107,7 +109,7 @@
                                             来自学科：<a href="#" class="alert-link">{{answerProblem.subject}} </a>
                                             • {{answerProblem.numberOfAnswers}}个回答 •
                                             {{answerProblem.numberOfFollowers}}人关注 <a href="#"
-                                                                                   class="alert-link">取消关注</a>
+                                                                                      class="alert-link">取消关注</a>
                                             <div>
                                             </div>
                                         </div>
@@ -115,7 +117,9 @@
                                 </ul>
 
                                 <div style="text-align:right;">
-                                    <button type="button"  ng-disabled="!canLoadMore" class=" btn btn-primary" ng-click="loadPage()">更多</button>
+                                    <button type="button" ng-disabled="!canLoadMore" class=" btn btn-primary"
+                                            ng-click="loadPage()">更多
+                                    </button>
                                     <!--  <div class="col-lg-3">
                                         <span class="zg-gray-normal">提问</span><br><br>
                                     </div>
@@ -127,11 +131,11 @@
                                 </div>
                             </div>
                         </a>
-            
+
                     </div>
 
                     <div role="tabpanel" class="tab-pane fade in" id="agrees">
-                         <a name="agree">
+                        <a name="agree">
                             <div ng-controller="AgreeProblemsController">
 
                                 <!-- <hr width="100%" color=#987cb9 SIZE=10 > -->
@@ -154,7 +158,7 @@
                                             来自学科：<a href="#" class="alert-link">{{agreeProblem.subject}} </a>
                                             • {{agreeProblem.numberOfagrees}}个回答 •
                                             {{agreeProblem.numberOfFollowers}}人关注 <a href="#"
-                                                                                   class="alert-link">取消关注</a>
+                                                                                     class="alert-link">取消关注</a>
                                             <div>
                                             </div>
                                         </div>
@@ -162,7 +166,9 @@
                                 </ul>
 
                                 <div style="text-align:right;">
-                                    <button type="button"  ng-disabled="!canLoadMore" class=" btn btn-primary" ng-click="loadPage()">更多</button>
+                                    <button type="button" ng-disabled="!canLoadMore" class=" btn btn-primary"
+                                            ng-click="loadPage()">更多
+                                    </button>
                                     <!--  <div class="col-lg-3">
                                         <span class="zg-gray-normal">提问</span><br><br>
                                     </div>
@@ -255,28 +261,9 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
-
         <div class="col-lg-3 col-lg-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="zm-profile-side-section-title">
-                        关注了 <a href="profileConcern.jsp#topics" class="zg-link-litblue"><strong>14 个话题</strong></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="zm-side-section-inner">
-                        <span class="zg-gray-normal">个人主页被 <strong>102</strong> 人浏览</span>
-                    </div>
-                </div>
-            </div>
-
+            <%@include file="frameJsp/profile/profileRightBar.jsp" %>
         </div>
     </div>
 </div>

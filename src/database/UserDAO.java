@@ -88,6 +88,7 @@ public class UserDAO implements IUserDAO {
 				user.setGender(set.getInt("gender"));
 				user.setIntroduction(set.getString("introduction"));
 				user.setLongIntro(set.getString("long_intro"));
+				user.setPoint(set.getInt("point"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -13,6 +13,7 @@ public class User {
 	String dept;
 	String email;
 	int gender;
+	int point;
 	String introduction;
 	String longIntro;
 
@@ -70,5 +71,13 @@ public class User {
 
 	public void setLongIntro(String longIntro) {
 		this.longIntro = longIntro;
+	}
+
+	public int getPoint() {
+		return point;
+	}
+
+	public void setPoint(int point) {
+		this.point = point;
 	}
 }

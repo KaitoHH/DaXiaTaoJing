@@ -211,54 +211,9 @@
 
 
         <div class="col-lg-4 col-lg-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="zm-profile-side-section-title">
-                        关注了 <a href="profileConcern.jsp#topics" class="zg-link-litblue"><strong>14 个话题</strong></a>
-                    </div>
-                </div>
+            <div class="col-lg-3 col-lg-offset-1">
+                <%@include file="frameJsp/profile/profileRightBar.jsp" %>
             </div>
-
-
-            <%--
-                <div class="zm-profile-side-topics" id="zh-profile-following-topic">
-
-                <a class="link" data-hovercard="t$b$19874223" href="/topic/19874223">
-                    <img class="Avatar Avatar--l" src="https://pic2.zhimg.com/90f9d7cc0738b74705aabe09fc508d25_l.png" srcset="https://pic2.zhimg.com/90f9d7cc0738b74705aabe09fc508d25_xl.png 2x" alt="河圖（歌手）">
-                </a>
-
-                <a class="link" data-hovercard="t$b$19580599" href="/topic/19580599">
-                    <img class="Avatar Avatar--l" src="https://pic1.zhimg.com/v2-61dd74b092312825e80f1de6f686a138_l.jpg" srcset="https://pic1.zhimg.com/v2-61dd74b092312825e80f1de6f686a138_xl.jpg 2x" alt="抑郁">
-                </a>
-
-                <a class="link" data-hovercard="t$b$19579921" href="/topic/19579921">
-                    <img class="Avatar Avatar--l" src="https://pic2.zhimg.com/5b7867f95e8395fe03db954b70394629_l.png" srcset="https://pic2.zhimg.com/5b7867f95e8395fe03db954b70394629_xl.png 2x" alt="女追男">
-                </a>
-
-                <a class="link" data-hovercard="t$b$19583225" href="/topic/19583225">
-                    <img class="Avatar Avatar--l" src="https://pic2.zhimg.com/f35c989d9_l.jpg" srcset="https://pic2.zhimg.com/f35c989d9_xl.jpg 2x" alt="初恋">
-                </a>
-
-                <a class="link" data-hovercard="t$t$19554945" href="/topic/19554945">
-                    <img class="Avatar Avatar--l" src="https://pic4.zhimg.com/acca8921f_l.jpg" srcset="https://pic4.zhimg.com/acca8921f_xl.jpg 2x" alt="心理">
-                </a>
-
-                <a class="link" data-hovercard="t$b$19568143" href="/topic/19568143">
-                    <img class="Avatar Avatar--l" src="https://pic3.zhimg.com/21d3703b08d5a57566ac67e3b728b01e_l.png" srcset="https://pic3.zhimg.com/21d3703b08d5a57566ac67e3b728b01e_xl.png 2x" alt="心理健康">
-                </a>
-
-                <a class="link" data-hovercard="t$b$19567962" href="/topic/19567962">
-                    <img class="Avatar Avatar--l" src="https://pic3.zhimg.com/43efd061747369b1f03cc2c34adca45e_l.jpg" srcset="https://pic3.zhimg.com/43efd061747369b1f03cc2c34adca45e_xl.jpg 2x" alt="博弈论">
-                </a>--%>
-
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="zm-side-section-inner">
-                        <span class="zg-gray-normal">个人主页被 <strong>102</strong> 人浏览</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 
