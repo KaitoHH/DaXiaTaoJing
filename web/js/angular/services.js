@@ -44,7 +44,7 @@ angular.module('daxiataojingApp')
             if (askProblems.length <= 0) {
                 return null;
             }
-            return askProblems.slice(0,1); 
+            return askProblems.slice(0,1);
         }
         askProblemsAskFac.getPage=function(pageSize,pageId) {
             var firstId = parseInt(pageSize) * parseInt(pageId);

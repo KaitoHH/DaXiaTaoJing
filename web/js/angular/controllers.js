@@ -12,13 +12,13 @@ angular.module('daxiataojingApp')
         $scope.canLoadMore= 1 < parseInt($scope.askProblemsLength);
         console.log(1 < parseInt($scope.askProblemsLength));
         /*$scope.getDataAskProblem=function () {
-            if ($scope.showALLAsks) {
-                return askProblemsFactory.getAskProblems();
-            }
-            else {
-                return askProblemsFactory.getFirstAskProblems();
-            }
-        }*/
+         if ($scope.showALLAsks) {
+         return askProblemsFactory.getAskProblems();
+         }
+         else {
+         return askProblemsFactory.getFirstAskProblems();
+         }
+         }*/
         $scope.loadPage=function() {
             if ($scope.pageId < $scope.askProblemsPages) {
                 if ($scope.begin) {
@@ -34,14 +34,14 @@ angular.module('daxiataojingApp')
                     $scope.canLoadMore=false;
                 }
             }
-            
 
-            
+
+
         }
 
         /*$scope.toggleShowALLAsks=function () {
-            $scope.showALLAsks = !$scope.showALLAsks;
-        };*/
+         $scope.showALLAsks = !$scope.showALLAsks;
+         };*/
 
     }])
 
