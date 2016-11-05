@@ -1,6 +1,8 @@
 package database;
 
-import Entity.Question;
+import entity.Question;
+
+import java.util.List;
 
 /**
  * Project: DaXiaTaoJing
@@ -10,11 +12,13 @@ import Entity.Question;
  * All rights reserved.
  */
 public interface IQuestionDAO {
-	public boolean insert(Question question);
+	public int insert(Question question);
 
 	public boolean delete(Question question);
 
 	public boolean update(Question question);
 
-	public Question select(String id);
+	public Question select(int id);
+
+	public List<Question> getList(int type);
 }

@@ -4,6 +4,7 @@
     <%@include file="frameJsp/header.jsp" %>
     <title>大夏淘经</title>
     <link href="/css/profile.css" rel="stylesheet"/>
+    <script src="/js/setting.js"></script>
 </head>
 <body>
 
@@ -26,7 +27,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="well bs-component">
-                <form class="form-horizontal">
+                <form class="form-horizontal" action="/updateProfile.do" method="post" id="settingForm">
                     <fieldset>
                         <legend>Legend</legend>
                         <div class="form-group">
@@ -35,13 +36,15 @@
                             <div class="col-lg-10">
                                 <div class="radio">
                                     <label>
-                                        <input name="gender" id="male" value="male" checked="checked" type="radio">
+                                        <input name="gender" id="male" value="0"
+                                        <c:out value='${user.gender==0?"checked":" "}'/> type="radio">
                                         男
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input name="gender" id="female" value="female" type="radio">
+                                        <input name="gender" id="female" value="1"
+                                        <c:out value='${user.gender==1?"checked":" "}'/> type="radio">
                                         女
                                     </label>
                                 </div>
@@ -51,7 +54,8 @@
                             <label for="inputEmail" class="col-lg-2 control-label">邮箱</label>
 
                             <div class="col-lg-10">
-                                <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+                                <input name="email" class="form-control" id="inputEmail" placeholder="Email" type="text"
+                                       value="${user.email}">
                             </div>
                         </div>
 
@@ -60,9 +64,9 @@
                             <label for="inputSentence introduction" class="col-lg-2 control-label">一句话介绍</label>
 
                             <div class="col-lg-10">
-                                <input class="form-control" id="inputSentence introduction"
+                                <input name="introduction" class="form-control" id="inputSentence introduction"
                                        placeholder="programmer"
-                                       type="text">
+                                       type="text" value="${user.introduction}">
                             </div>
                         </div>
 
@@ -70,7 +74,8 @@
                             <label for="Personal Introduction" class="col-lg-2 control-label">个人简介</label>
 
                             <div class="col-lg-10">
-                                <textarea class="form-control" rows="3" id="Personal Introduction"></textarea>
+                                <textarea name="longIntro" class="form-control" rows="3"
+                                          id="Personal Introduction">${user.longIntro}</textarea>
                             </div>
                         </div>
 
@@ -78,11 +83,11 @@
                             <label for="topics" class="col-lg-2 control-label">擅长话题</label>
 
                             <div class="col-lg-10">
-                                <textarea class="form-control" rows="3" id="topics"></textarea>
+                                <textarea name="topic" class="form-control" rows="3" id="topics"></textarea>
                             </div>
                         </div>
 
-                        <a name="box">
+                        <%--<a name="box">
                             <div class="form-group">
                                 <label class="col-lg-2 control-label">是否开启陌生人</label>
 
@@ -105,10 +110,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </a>--%>
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
-                                <button type="reset" class="btn btn-default">Cancel</button>
+                                <button type="reset" class="btn btn-default">Reset</button>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </div>

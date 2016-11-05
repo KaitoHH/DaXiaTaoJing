@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="navbar-main">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
-                <li><a href="/read.jsp">全民悬赏</a></li>
+                <li><a href="/question">全民悬赏</a></li>
                 <li><a href="/private_index.jsp">私有悬赏</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
@@ -35,11 +35,10 @@
                         </li>
                         <li class="divider"></li>
                         <li><a href="/user/letter">我的消息</a></li>
+                        <li><a href="/user/concern">我的关注</a></li>
+                        <li class="divider"></li>
                         <li><a href="/user">个人中心</a></li>
                         <li><a href="/user/setting">设置</a></li>
-                        <li class="divider"></li>
-                        <li><a href="/user/concern">我的关注</a></li>
-                        <li><a href="#">我的问题</a></li>
                         <li class="divider"></li>
                         <li><a href="/logout.do">退出登录</a></li>
                     </ul>

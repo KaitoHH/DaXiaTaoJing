@@ -2,9 +2,11 @@
   <library name="json-20160810">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/lib" />
+      <root url="file://E:/Program Files (x86)/Apache Software Foundation/Tomcat 9.0/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
     <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
+    <jarDirectory url="file://E:/Program Files (x86)/Apache Software Foundation/Tomcat 9.0/lib" recursive="false" />
   </library>
 </component>

@@ -19,7 +19,7 @@ public class Connection {
 		conn.setDoOutput(true);
 		conn.setDoInput(true);
 		conn.setRequestMethod("POST");
-		conn.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)");
+		conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36");
 		conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
 		//conn.setRequestProperty("Accept-Encoding", "identity");
 		conn.connect();

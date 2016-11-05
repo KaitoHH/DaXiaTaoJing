@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--meta元素--%>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
@@ -12,6 +12,7 @@
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/animate.css" rel="stylesheet">
 <link href="/css/global.css" rel="stylesheet">
+<link href="/css/mytextstyle.css" rel="stylesheet"> <%--修改全局字体--%>
 
 <%--js元素--%>
 <script src="/js/jQuery/jquery-2.1.3.min.js"></script>

@@ -182,6 +182,7 @@
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
                                 <div class="panel-body">
                                     <div>
+
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <a href="#">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
@@ -208,7 +209,7 @@
                             <div class="panel-heading" role="tab" id="headingFour">
                                 <h4 class="panel-title">
                                     <a class="" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                        思政&英语
+                                        其他
                                     </a>
                                 </h4>
                             </div>

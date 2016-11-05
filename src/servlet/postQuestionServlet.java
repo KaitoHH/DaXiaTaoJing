@@ -1,8 +1,10 @@
 package servlet;
 
-import Entity.Question;
-import Entity.exception.QuestionValidateException;
+import entity.Question;
+import entity.User;
+import entity.exception.QuestionValidateException;
 import database.QuestionDAO;
+import org.json.JSONObject;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -26,6 +28,7 @@ public class postQuestionServlet extends HttpServlet {
 		question.setTittle(req.getParameter("tittle"));
 		question.setqType(Integer.valueOf(req.getParameter("type")));
 		question.setContent(req.getParameter("content"));
+		question.setUserId(((User) req.getSession().getAttribute("user")).getId());
 		try {
 			question.setPay(Integer.valueOf(req.getParameter("pay")));
 		} catch (NumberFormatException e) {
@@ -38,12 +41,19 @@ public class postQuestionServlet extends HttpServlet {
 		} catch (QuestionValidateException e) {
 			msg = e.getMessage();
 		}
+		int qid = new QuestionDAO().insert(question);
+
+
 		resp.setCharacterEncoding("utf-8");
+		resp.setContentType("application/json");
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.append("msg", msg);
+		jsonObject.append("id", qid);
 		PrintWriter out = resp.getWriter();
-		out.print(msg);
+		out.print(jsonObject);
 		out.flush();
 		out.close();
 
-		new QuestionDAO().insert(question);
+
 	}
 }
