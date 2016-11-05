@@ -40,6 +40,11 @@
         <servlet-class>servlet.AnswerServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>BrowseUserServlet</servlet-name>
+        <servlet-class>servlet.BrowseUserServlet</servlet-class>
+    </servlet>
+
+    <servlet>
         <servlet-name>ProfileAskListServlet</servlet-name>
         <servlet-class>servlet.jsonQuery.ProfileAskListServlet</servlet-class>
     </servlet>
@@ -95,6 +100,10 @@
     <servlet-mapping>
         <servlet-name>ProfileAskListCountServlet</servlet-name>
         <url-pattern>/askListCount.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BrowseUserServlet</servlet-name>
+        <url-pattern>/profile/*</url-pattern>
     </servlet-mapping>
 
     <filter>

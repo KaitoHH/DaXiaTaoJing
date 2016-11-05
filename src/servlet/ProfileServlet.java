@@ -17,6 +17,7 @@ public class ProfileServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String uri = req.getRequestURI();
+		req.getSession().setAttribute("curUser", req.getSession().getAttribute("user"));
 		String reqJsp = "/profileCenter.jsp";
 		if (uri.equals("/user/setting")) {
 			reqJsp = "/profileSetting.jsp";

@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c68fc704-192b-40fc-a990-97213765a838" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListCountServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/servlet/BrowseUserServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/QuestionDAO.java" afterPath="$PROJECT_DIR$/src/database/QuestionDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlet/ProfileServlet.java" afterPath="$PROJECT_DIR$/src/servlet/ProfileServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListCountServlet.java" afterPath="$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListCountServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListServlet.java" afterPath="$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/frameJsp/profile/profileRightBar.jsp" afterPath="$PROJECT_DIR$/web/frameJsp/profile/profileRightBar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/profileConcern.jsp" afterPath="$PROJECT_DIR$/web/profileConcern.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/frameJsp/profile/profilePanel.jsp" afterPath="$PROJECT_DIR$/web/frameJsp/profile/profilePanel.jsp" />
     </list>
     <ignored path="DaXiaTaoJing.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,30 +38,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="QuestionDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/QuestionDAO.java">
+      <file leaf-file-name="PublicQuestionServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/servlet/PublicQuestionServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="123" column="45" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
+            <state relative-caret-position="475">
+              <caret line="33" column="83" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrowseUserServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/BrowseUserServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="29" column="80" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
               <folding>
-                <element signature="method#select#0;class#QuestionDAO#0" expanded="false" />
-                <marker date="1478353613000" expanded="true" signature="400:470" ph="INSERT INTO question... " />
-                <marker date="1478353613000" expanded="true" signature="1500:1535" ph="SELECT * FRO... question" />
-                <marker date="1478353613000" expanded="true" signature="2444:2466" ph="SELECT * FRO... question" />
-                <marker date="1478353613000" expanded="true" signature="2444:2481" ph="SELECT * FRO... question" />
-                <marker date="1478353613000" expanded="true" signature="3034:3073" ph="SELECT * FRO... question" />
-                <marker date="1478353613000" expanded="true" signature="3220:3266" ph="SELECT COUNT... question" />
-                <marker date="1478353613000" expanded="true" signature="3409:3489" ph="SELECT * FRO... question" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <file leaf-file-name="profileCenter.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/profileCenter.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+            <state relative-caret-position="228">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PubQListServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/PubQListServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profilePanel.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/frameJsp/profile/profilePanel.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -70,10 +93,36 @@
       <file leaf-file-name="ProfileAskListCountServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListCountServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state relative-caret-position="418">
+              <caret line="22" column="100" selection-start-line="22" selection-start-column="100" selection-end-line="22" selection-end-column="100" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileAskListServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="28" column="105" selection-start-line="28" selection-start-column="105" selection-end-line="28" selection-end-column="105" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/database/UserDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-50">
+              <caret line="52" column="48" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+              <folding>
+                <marker date="1478336164000" expanded="true" signature="333:399" ph="INSERT INTO user... " />
+                <marker date="1478336164000" expanded="true" signature="1120:1191" ph="UPDATE user " />
+                <marker date="1478336164000" expanded="true" signature="1875:1906" ph="SELECT * FRO... user" />
               </folding>
             </state>
           </provider>
@@ -101,8 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/database/IUserDAO.java" />
-        <option value="$PROJECT_DIR$/web/css/jquery.tagsinput.min.css" />
         <option value="$PROJECT_DIR$/src/Entity/QuestionValidateException.java" />
         <option value="$PROJECT_DIR$/src/Entity/exception/QuestionValidateException.java" />
         <option value="$PROJECT_DIR$/web/read.jsp" />
@@ -113,7 +160,6 @@
         <option value="$PROJECT_DIR$/src/servlet/settingUpdateServlet.java" />
         <option value="$PROJECT_DIR$/web/js/setting.js" />
         <option value="$PROJECT_DIR$/web/profileSetting.jsp" />
-        <option value="$PROJECT_DIR$/web/frameJsp/profile/profilePanel.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/QuestionListServlet.java" />
         <option value="$PROJECT_DIR$/web/frameJsp/navbar.jsp" />
         <option value="$PROJECT_DIR$/src/entity/tag.java" />
@@ -145,13 +191,16 @@
         <option value="$PROJECT_DIR$/src/database/AnswerDAO.java" />
         <option value="$PROJECT_DIR$/web/question.jsp" />
         <option value="$PROJECT_DIR$/web/profileConcern.jsp" />
-        <option value="$PROJECT_DIR$/web/frameJsp/profile/profileRightBar.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/ProfileAskListServlet.java" />
         <option value="$PROJECT_DIR$/src/servlet/ProfileAskListCountServlet.java" />
-        <option value="$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListServlet.java" />
         <option value="$PROJECT_DIR$/src/database/QuestionDAO.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/frameJsp/profile/profilePanel.jsp" />
+        <option value="$PROJECT_DIR$/web/frameJsp/profile/profileRightBar.jsp" />
+        <option value="$PROJECT_DIR$/src/servlet/ProfileServlet.java" />
         <option value="$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListCountServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/servlet/BrowseUserServlet.java" />
       </list>
     </option>
   </component>
@@ -265,28 +314,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DaXiaTaoJing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DaXiaTaoJing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -984,7 +1011,7 @@
       <workItem from="1478155623162" duration="9630000" />
       <workItem from="1478186359702" duration="2298000" />
       <workItem from="1478229989020" duration="28406000" />
-      <workItem from="1478340125609" duration="4614000" />
+      <workItem from="1478340125609" duration="5744000" />
     </task>
     <task id="LOCAL-00003" summary="post_question tag &amp; database">
       <created>1478162469595</created>
@@ -1077,11 +1104,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478340741348</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ajax List">
+      <created>1478353893640</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1478353893640</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52679000" />
+    <option name="totallyTimeSpent" value="53809000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1170,7 +1204,8 @@
     <MESSAGE value="files clean" />
     <MESSAGE value="answer question implemented" />
     <MESSAGE value="import c:if" />
-    <option name="LAST_COMMIT_MESSAGE" value="import c:if" />
+    <MESSAGE value="ajax List" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajax List" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1182,7 +1217,7 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1191,21 +1226,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/dataSources/a9a145ce-c490-4422-9943-fba2d72ecf27.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-422">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/IUserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/frameJsp/navbar.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -1391,16 +1411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/PubQListServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/database/TagDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1068">
@@ -1540,14 +1550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/frameJsp/profile/profileRightBar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/profileConcern.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
@@ -1556,38 +1558,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/profileCenter.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1478336164000" expanded="true" signature="333:399" ph="INSERT INTO user... " />
-            <marker date="1478336164000" expanded="true" signature="1120:1191" ph="UPDATE user " />
-            <marker date="1478336164000" expanded="true" signature="1875:1906" ph="SELECT * FRO... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/angular/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-722">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/ProfileServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1616,14 +1590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/PublicQuestionServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/database/QuestionDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -1641,30 +1607,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListCountServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/frameJsp/profile/profileRightBar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="361">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/servlet/ProfileServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="113" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/frameJsp/profile/profilePanel.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+        <state relative-caret-position="631">
+          <caret line="105" column="45" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="28" column="105" selection-start-line="28" selection-start-column="105" selection-end-line="28" selection-end-column="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="52" column="48" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+          <folding>
+            <marker date="1478336164000" expanded="true" signature="333:399" ph="INSERT INTO user... " />
+            <marker date="1478336164000" expanded="true" signature="1120:1191" ph="UPDATE user " />
+            <marker date="1478336164000" expanded="true" signature="1875:1906" ph="SELECT * FRO... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/jsonQuery/ProfileAskListCountServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="100" selection-start-line="22" selection-start-column="100" selection-end-line="22" selection-end-column="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/BrowseUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="80" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/profileCenter.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/PubQListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/PublicQuestionServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="33" column="83" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
           <folding />
         </state>
       </provider>

@@ -20,7 +20,7 @@ import java.io.PrintWriter;
 public class ProfileAskListCountServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		int count = new QuestionDAO().getAskListCount(((User) req.getSession().getAttribute("user")).getId());
+		int count = new QuestionDAO().getAskListCount(((User) req.getSession().getAttribute("curUser")).getId());
 		PrintWriter out = resp.getWriter();
 		out.print(count);
 		out.flush();

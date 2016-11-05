@@ -8,9 +8,9 @@
             <img src="/imgs/me.jpg" class="img-rounded picture hidden-xs">
             <img src="/imgs/me.jpg" class="img-rounded visible-xs picture_mob">
             <div class="header">
-                <h2>${user.name}</h2>
-                <h4>${user.dept}</h4>
-                <span>${user.introduction}</span>
+                <h2>${curUser.name}</h2>
+                <h4>${curUser.dept}</h4>
+                <span>${curUser.introduction}</span>
             </div>
 
             <div class="btn-group btn-block">

@@ -26,7 +26,7 @@ public class ProfileAskListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int pageSize = Integer.valueOf(req.getParameter("pageSize"));
 		int pageId = Integer.valueOf(req.getParameter("pageId"));
-		List<Question> list = new QuestionDAO().getAskList(((User) req.getSession().getAttribute("user")).getId(), pageSize, pageId);
+		List<Question> list = new QuestionDAO().getAskList(((User) req.getSession().getAttribute("curUser")).getId(), pageSize, pageId);
 		JSONArray array = new JSONArray();
 		for (Question question : list) {
 			JSONObject q = new JSONObject();
