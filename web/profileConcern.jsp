@@ -15,10 +15,10 @@
     <%--以下代码请删除--%>
     <%@include file="frameJsp/profile/profilePanel.jsp" %>
     <%--从此位置开始写代码--%>
-        <ul class="breadcrumb">
-            <li><a href="/user">个人中心</a></li>
-            <li class="active">关注</li>
-        </ul>
+    <ul class="breadcrumb">
+        <li><a href="/user">个人中心</a></li>
+        <li class="active">关注</li>
+    </ul>
 
     <div class="row">
 
@@ -141,7 +141,7 @@
                 </div>
             </a>
 
-            <a name="topics">
+            <%--<a name="topics">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
@@ -205,15 +205,13 @@
                     </div>
 
                 </div>
-            </a>
+            </a>--%>
 
         </div>
 
 
         <div class="col-lg-4 col-lg-offset-1">
-            <div class="col-lg-3 col-lg-offset-1">
-                <%@include file="frameJsp/profile/profileRightBar.jsp" %>
-            </div>
+            <%@include file="frameJsp/profile/profileRightBar.jsp" %>
         </div>
     </div>
 

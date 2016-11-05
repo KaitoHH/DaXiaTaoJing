@@ -98,15 +98,7 @@ public class QuestionDAO implements IQuestionDAO {
 			statement.setInt(1, type);
 			ResultSet set = statement.executeQuery();
 			while (set.next()) {
-				Question question = new Question();
-				question.setId(set.getInt("id"));
-				question.setTittle(set.getString("tittle"));
-				//question.setqType(set.getInt("type"));
-				//question.setContent(set.getString("content"));
-				question.setPay(set.getInt("pay"));
-				//question.setUserId(set.getString("userId"));
-				question.setTag(new TagDAO().getAllTag(question.getId()));
-				list.add(question);
+				list.add(setBasic(set));
 			}
 			statement.close();
 			return list;
@@ -120,5 +112,82 @@ public class QuestionDAO implements IQuestionDAO {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	public List<Question> getAskList(String userId, int pageSize, int pageId) {
+		String sql = "SELECT * FROM question WHERE userId = ? LIMIT " + pageId * pageSize + "," + pageSize;
+		return getUserList(sql, userId);
+	}
+
+	public int getAskListCount(String userId) {
+		String sql = "SELECT COUNT(*) FROM question WHERE userId = ?";
+		return getUserListCount(sql, userId);
+	}
+
+	public List<Question> getAnswerList(String userId, int pageSize, int pageId) {
+		String sql = "SELECT * FROM question JOIN answer ON question.id=answer.qid AND answer.userId=? LIMIT " + pageId * pageSize + "," + pageSize;
+		return getUserList(sql, userId);
+	}
+
+	private Question setBasic(ResultSet set) {
+		Question question = new Question();
+		try {
+			question.setId(set.getInt("id"));
+			question.setTittle(set.getString("tittle"));
+			//question.setqType(set.getInt("type"));
+			//question.setContent(set.getString("content"));
+			question.setPay(set.getInt("pay"));
+			//question.setUserId(set.getString("userId"));
+			question.setTag(new TagDAO().getAllTag(question.getId()));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return question;
+	}
+
+	private List<Question> getUserList(String sql, String userId) {
+		List<Question> list = new ArrayList();
+		Connection connection = Util.getConnection();
+		try {
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, userId);
+			ResultSet set = statement.executeQuery();
+			while (set.next()) {
+				list.add(setBasic(set));
+			}
+			statement.close();
+			return list;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	private int getUserListCount(String sql, String userId) {
+		int count = 0;
+		Connection connection = Util.getConnection();
+		try {
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, userId);
+			ResultSet set = statement.executeQuery();
+			set.next();
+			count = set.getInt(1);
+			statement.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return count;
 	}
 }

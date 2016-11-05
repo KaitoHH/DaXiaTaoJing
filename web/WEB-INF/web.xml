@@ -39,6 +39,14 @@
         <servlet-name>AnswerServlet</servlet-name>
         <servlet-class>servlet.AnswerServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProfileAskListServlet</servlet-name>
+        <servlet-class>servlet.jsonQuery.ProfileAskListServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProfileAskListCountServlet</servlet-name>
+        <servlet-class>servlet.jsonQuery.ProfileAskListCountServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -79,6 +87,14 @@
     <servlet-mapping>
         <servlet-name>AnswerServlet</servlet-name>
         <url-pattern>/postAnswer.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfileAskListServlet</servlet-name>
+        <url-pattern>/askList.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfileAskListCountServlet</servlet-name>
+        <url-pattern>/askListCount.do</url-pattern>
     </servlet-mapping>
 
     <filter>
