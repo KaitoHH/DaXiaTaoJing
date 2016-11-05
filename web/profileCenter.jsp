@@ -44,9 +44,6 @@
                     <div role="tabpanel" class="tab-pane active" id="questions">
                         <a name="questions">
                             <div ng-controller="AskProblemsController">
-
-                                <!-- <hr width="100%" color=#987cb9 SIZE=10 > -->
-
                                 <ul class="list-unstyled">
                                     <li class="row" ng-repeat="askProblem in askProblems"
                                         style="margin-bottom: 10px">
@@ -69,12 +66,9 @@
                                             <div>
                                             </div>
                                         </div>
-
                                     </li>
-
-
-
                                 </ul>
+
                                 <div style="text-align:right;">
                                     <button type="button"  ng-disabled="!canLoadMore" class=" btn btn-primary" ng-click="loadPage()">更多</button>
                                     <!--  <div class="col-lg-3">
@@ -87,8 +81,6 @@
                                     </div> -->
                                 </div>
 
-
-
                             </div>
                         </a>
 
@@ -96,73 +88,94 @@
 
                     <div role="tabpanel" class="tab-pane" id="answers">
                         <a name="answer">
-                            <div class="panel panel-default">
-                                <div class="panel-body">
-                                    <div class="col-lg-3">
-                                        <span class="zg-gray-normal">回答</span><br><br>
-                                    </div>
-                                    <div class="col-lg-6">
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <a href="#"> 全部回答→</a>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-body">
+                            <div ng-controller="AnswerProblemsController">
+                                <ul class="list-unstyled">
+                                    <li class="row" ng-repeat="answerProblem in answerProblems"
+                                        style="margin-bottom: 10px">
+                                        <!-- <div>
+                                        <hr width="80%" color=#987cb9  ng-show="$index > 0">
+                                        </div> -->
                                         <div class="col-lg-2">
                                             <div class="bs-component">
                                                 <div class="well well-sm">
-                                                    387次<br>浏览
+                                                    {{answerProblem.looktimes}}次<br>浏览
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-10">
-                                            <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</a><br>
-                                            来自学科：<a href="#" class="alert-link">概率论 </a>
-                                            • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
+                                            <a href="#"> {{answerProblem.title}}</a><br>
+                                            来自学科：<a href="#" class="alert-link">{{answerProblem.subject}} </a>
+                                            • {{answerProblem.numberOfAnswers}}个回答 •
+                                            {{answerProblem.numberOfFollowers}}人关注 <a href="#"
+                                                                                   class="alert-link">取消关注</a>
                                             <div>
                                             </div>
                                         </div>
+                                    </li>
+                                </ul>
+
+                                <div style="text-align:right;">
+                                    <button type="button"  ng-disabled="!canLoadMore" class=" btn btn-primary" ng-click="loadPage()">更多</button>
+                                    <!--  <div class="col-lg-3">
+                                        <span class="zg-gray-normal">提问</span><br><br>
                                     </div>
+                                    <div class="col-lg-6">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <a ng-click="toggleShowALLAsks()"> {{ showALLAsks ? '缩小提问' : '全部提问→ '}}</a>
+                                    </div> -->
                                 </div>
                             </div>
                         </a>
+            
                     </div>
 
                     <div role="tabpanel" class="tab-pane" id="agrees">
-                        <a name="agree">
-                            <div class="panel panel-default">
-                                <div class="panel-body">
-                                    <div class="col-lg-3">
-                                        <span class="zg-gray-normal">赞同</span><br><br>
-                                    </div>
-                                    <div class="col-lg-6">
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <a href="#"> 全部赞同→</a>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-body">
+                         <a name="agree">
+                            <div ng-controller="AgreeProblemsController">
+
+                                <!-- <hr width="100%" color=#987cb9 SIZE=10 > -->
+
+                                <ul class="list-unstyled">
+                                    <li class="row" ng-repeat="agreeProblem in agreeProblems"
+                                        style="margin-bottom: 10px">
+                                        <!-- <div>
+                                        <hr width="80%" color=#987cb9  ng-show="$index > 0">
+                                        </div> -->
                                         <div class="col-lg-2">
                                             <div class="bs-component">
                                                 <div class="well well-sm">
-                                                    890次<br>浏览
+                                                    {{agreeProblem.looktimes}}次<br>浏览
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-10">
-                                            <a href="#"> 使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a><br>
-                                            来自学科：<a href="#" class="alert-link">计算机科学概论 </a>
-                                            • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
+                                            <a href="#"> {{agreeProblem.title}}</a><br>
+                                            来自学科：<a href="#" class="alert-link">{{agreeProblem.subject}} </a>
+                                            • {{agreeProblem.numberOfagrees}}个回答 •
+                                            {{agreeProblem.numberOfFollowers}}人关注 <a href="#"
+                                                                                   class="alert-link">取消关注</a>
                                             <div>
                                             </div>
                                         </div>
+                                    </li>
+                                </ul>
+
+                                <div style="text-align:right;">
+                                    <button type="button"  ng-disabled="!canLoadMore" class=" btn btn-primary" ng-click="loadPage()">更多</button>
+                                    <!--  <div class="col-lg-3">
+                                        <span class="zg-gray-normal">提问</span><br><br>
                                     </div>
+                                    <div class="col-lg-6">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <a ng-click="toggleShowALLAsks()"> {{ showALLAsks ? '缩小提问' : '全部提问→ '}}</a>
+                                    </div> -->
                                 </div>
                             </div>
                         </a>
                     </div>
+                    
                     <div role="tabpanel" class="tab-pane" id="marks">
                         <a name="collection">
                             <div class="panel panel-default">
