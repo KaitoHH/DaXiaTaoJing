@@ -1,3 +1,4 @@
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <head>
@@ -32,16 +33,24 @@
         <div class="panel panel-default">
             <div class="panel-body">
 
-                <h2>最佳答案</h2><img src="/imgs/me.jpg" class="img-circle" alt="image" style="width:50px;height:50px;">
-                <a class="author-link" href="">${answers[0].anonymous==0?answers[0].userName:"匿名用户"}</a><br/>
-                <div>${answers[0].content}</div>
+                <h2>最佳答案</h2>
+                <c:if test="${fn:length(answers)==0}">
+                    还没有最佳答案哦！快来回答问题吧！
+                </c:if>
+                <c:if test="${fn:length(answers)>0}">
+                    <img src="/imgs/me.jpg" class="img-circle" alt="image" style="width:50px;height:50px;">
+                    <a class="author-link" href="">${answers[0].anonymous==0?answers[0].userName:"匿名用户"}</a><br/>
+                    <div>${answers[0].content}</div>
+                </c:if>
             </div>
         </div>
 
         <div class="panel panel-default">
             <div class="panel-body">
-
                 <h2>其他答案</h2>
+                <c:if test="${fn:length(answers)==0}">
+                    然而并没有人回答问题╮(╯▽╰)╭
+                </c:if>
                 <c:forEach var="curans" items="${answers}" begin="1">
                     <a class="author-link" href="">${curans.anonymous==0?curans.userName:"匿名用户"}</a><br/>
                     <div>${curans.content}</div>
