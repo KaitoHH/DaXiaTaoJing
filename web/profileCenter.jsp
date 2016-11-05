@@ -41,7 +41,7 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="questions">
+                    <div role="tabpanel" class="tab-pane fade in active" id="questions">
                         <a name="questions">
                             <div ng-controller="AskProblemsController">
                                 <ul class="list-unstyled">
@@ -86,7 +86,7 @@
 
                     </div>
 
-                    <div role="tabpanel" class="tab-pane" id="answers">
+                    <div role="tabpanel" class="tab-pane fade in" id="answers">
                         <a name="answer">
                             <div ng-controller="AnswerProblemsController">
                                 <ul class="list-unstyled">
@@ -130,7 +130,7 @@
             
                     </div>
 
-                    <div role="tabpanel" class="tab-pane" id="agrees">
+                    <div role="tabpanel" class="tab-pane fade in" id="agrees">
                          <a name="agree">
                             <div ng-controller="AgreeProblemsController">
 
@@ -175,8 +175,8 @@
                             </div>
                         </a>
                     </div>
-                    
-                    <div role="tabpanel" class="tab-pane" id="marks">
+
+                    <div role="tabpanel" class="tab-pane fade in" id="marks">
                         <a name="collection">
                             <div class="panel panel-default">
                                 <div class="panel-body">

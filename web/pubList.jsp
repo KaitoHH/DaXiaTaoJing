@@ -47,17 +47,7 @@
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="arts">
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingTwo">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="">
-                                            热门问题
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading" aria-expanded="true" style="">
-                                    <div class="panel-body">
+                            <div class="panel-body">
                                         <div>
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
@@ -68,6 +58,7 @@
                                                     • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
@@ -77,6 +68,7 @@
                                                     • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <a href="#">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
@@ -86,6 +78,7 @@
                                                     • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
@@ -95,10 +88,13 @@
                                                     • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+                                            
                                         </div>
+
                                     </div>
-                                </div>
-                            </div>
+
+
+                            
                             </div>
                         <a href="#" class="btn btn-success">更多</a>
                         </div>
@@ -107,17 +103,7 @@
 
                     <div class="tab-pane fade action in" id="sciences">
                         <div class="panel-group" id="accordiontwo" role="tablist" aria-multiselectable="true">
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingFour">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="">
-                                            热门问题
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour" aria-expanded="true" style="">
-                                    <div class="panel-body">
+                             <div class="panel-body">
                                         <div>
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
@@ -128,6 +114,7 @@
                                                     • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
@@ -137,6 +124,7 @@
                                                     • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <a href="#">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
@@ -146,6 +134,7 @@
                                                     • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
@@ -155,25 +144,16 @@
                                                     • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                           
                         </div>
                         <a href="#" class="btn btn-success">更多</a>
                     </div>
                     <div class="tab-pane fade activity in" id="engineer">
                         <div class="panel-group" id="accordionthree" role="tablist" aria-multiselectable="true">
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingsix">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordionthree" href="#collapsesix" aria-expanded="true" aria-controls="collapsesix" class="">
-                                            热门问题
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapsesix" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingsix" aria-expanded="true" style="">
-                                    <div class="panel-body">
+                            <div class="panel-body">
                                         <div>
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
@@ -184,6 +164,7 @@
                                                     • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
@@ -193,6 +174,7 @@
                                                     • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <a href="#">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
@@ -202,6 +184,7 @@
                                                     • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
@@ -211,26 +194,16 @@
                                                     • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                        
                         </div>
                         <a href="#" class="btn btn-success">更多</a>
                     </div>
                     <div class="tab-pane fade actively in" id="others">
                         <div class="panel-group" id="accordionfour" role="tablist" aria-multiselectable="true">
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingeight">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordionfour" href="#collapseeight" aria-expanded="true" aria-controls="collapseeight" class="">
-                                            热门问题
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseight" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingeight" aria-expanded="true" style="">
-                                    <div class="panel-body">
+                            <div class="panel-body">
                                         <div>
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
@@ -241,6 +214,7 @@
                                                     • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
@@ -250,6 +224,7 @@
                                                     • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <a href="#">  使用二分搜索在200项的表中进行查找时所需查找的最大项是多少?如果是100 000项的表又会如何呢？</a>
@@ -259,6 +234,7 @@
                                                     • 100个回答 • 56人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <a href="#"> 有10道选择型测验题,要求从每题的5种答案中选出一种正确的答案,如果一人随意猜答,他答对不少于6道题的</a>
@@ -268,10 +244,10 @@
                                                     • 56个回答 • 20人关注 <a href="#" class="alert-link">取消关注</a>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                            
                         </div>
                         <a href="#" class="btn btn-success">更多</a>
                     </div>
