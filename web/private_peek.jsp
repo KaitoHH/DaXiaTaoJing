@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <head>
     <%@include file="frameJsp/header.jsp" %>
+    <%@include file="frameJsp/pulgin/textarea.jsp" %>
     <title>大夏淘经</title>
     <style type="text/css">
         body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
@@ -40,11 +41,45 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                    <div class="col-lg-10">
                     <p>
                         数字逻辑整体的结构是什么？<br/>
                         感觉学的很模糊。<br/>
                     </p>
                     <p> </p>
+                    </div>
+                        <div class="col-lg-2">
+                            <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">回答</button>
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                ×
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                你的答案
+                                            </h4>
+                                        </div>
+
+                                        <div class="modal-body">
+                                                <textarea rows=20 class="editor" name="content"></textarea>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                            </button>
+                                            <button type="button" class="btn btn-primary">
+                                                发送
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="panel panel-default">
@@ -52,12 +87,49 @@
                     <div class="page-header">
                         <h1>回答 <small>(由 <em>泥老鼠</em> 提供)</small></h1>
                     </div>
+                    <div class="row">
+                    <div class="col-lg-10">
                     <p>
                         这是一个好问题。<br/>
                         数字逻辑怎么学呢？<br/>
                         认真学。<br/>
                     </p>
                     <p>  </p>
+                        </div>
+
+
+                        <div class="col-lg-2">
+                            <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">评价</button>
+                            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                ×
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel1">
+                                                这个答案如何
+                                            </h4>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <textarea rows=20 class="editor" name="content"></textarea>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                            </button>
+                                            <button type="button" class="btn btn-primary">
+                                                发送
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        </div>
                 </div>
             </div>
         </div>
@@ -112,22 +184,15 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-6">
+
+
                     <div class="bs-component">
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                        <blockquote class="pull-left">
+                            <p>趁年轻少壮去探求知识吧，它将弥补由于年老而带来的亏损。智慧乃是老年的精神养料，所以年轻时应该努力，这样，年轻时才不致空虚</p>
+                            <small> <cite title="Source Title">达·芬奇</cite></small>
                         </blockquote>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="bs-component">
-                        <blockquote class="pull-right">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                        </blockquote>
-                    </div>
-                </div>
+
             </div>
 
         </div>
