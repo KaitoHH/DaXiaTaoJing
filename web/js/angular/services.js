@@ -6,7 +6,7 @@ angular.module('daxiataojingApp')
         var askProblems=[
             {
                 looktimes:"123",
-                title:"二数余一,五数余二,七数余三,九数余四,问该数几何?",
+                title:"二数余一,五数余二,七数余三,九数余四,问该数几何?**********************************************************************************************************************************",
                 subject:"离散数学",
                 numberOfAnswers:"4",
                 numberOfFollowers:"8"
@@ -40,10 +40,31 @@ angular.module('daxiataojingApp')
                 numberOfFollowers:"7"
             }
         ];
+        askProblemsAskFac.getFirstAskProblem=function() {
+            if (askProblems.length <= 0) {
+                return null;
+            }
+            return askProblems.slice(0,1); 
+        }
+        askProblemsAskFac.getPage=function(pageSize,pageId) {
+            /*var maxId = parseInt(pageSize) * (parseInt(pageId) + 1) - 1;
+            if (maxId >= askProblems.length) {
+                return null;
+            } */
+            var firstId = parseInt(pageSize) * parseInt(pageId);
+            var lastId = Math.min(firstId + parseInt(pageSize),askProblems.length);
+            return askProblems.slice(firstId,lastId);
+        }
+        askProblemsAskFac.getLength=function() {
+            return askProblems.length;
+        }
+        askProblemsAskFac.getPages=function(pageSize) {
+            return (askProblems.length + pageSize - 1) / pageSize;
+        }
         askProblemsAskFac.getAskProblems = function(){
             return askProblems;
         };
-        askProblemsAskFac.getFirstAskProblems = function(index){
+        askProblemsAskFac.getSingleAskProblems = function(index){
             if (index >= askProblems.length) {
                 return null;
             }
@@ -51,6 +72,14 @@ angular.module('daxiataojingApp')
         };
         return askProblemsAskFac;
     });
+
+
+
+
+
+
+
+
 
 
 
