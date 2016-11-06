@@ -91,11 +91,11 @@ public class QuestionDAO implements IQuestionDAO {
 	}
 
 	@Override
-	public List<Question> getList(int type) {
+	public List<Question> getList(int type, int pageSize, int pageId) {
 		containTag = true;
 		List<Question> list = new ArrayList();
 		Connection connection = Util.getConnection();
-		String sql = "SELECT * FROM question WHERE type = ? AND puserId = \"\"";
+		String sql = "SELECT * FROM question WHERE type = ? AND puserId = \"\" LIMIT " + pageId * pageSize + "," + pageSize;
 		System.out.println(sql);
 		try {
 			PreparedStatement statement = connection.prepareStatement(sql);
@@ -151,7 +151,7 @@ public class QuestionDAO implements IQuestionDAO {
 	}
 
 	private List<Question> getUserList(String sql, String userId) {
-		containTag = false;
+		containTag = userId.equals("");
 		List<Question> list = new ArrayList();
 		Connection connection = Util.getConnection();
 		try {
@@ -195,5 +195,12 @@ public class QuestionDAO implements IQuestionDAO {
 			}
 		}
 		return count;
+	}
+
+	public List<Question> getIndexList() {
+		String sql = "SELECT * FROM question a\n" +
+				"WHERE (select COUNT(*) from question b where a.type=b.type and a.id<b.id) <=1 AND a.type >=1 AND a.puserId = ? \n" +
+				"ORDER BY type, id DESC";
+		return getUserList(sql, "");
 	}
 }

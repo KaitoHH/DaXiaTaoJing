@@ -20,5 +20,5 @@ public interface IQuestionDAO {
 
 	public Question select(int id);
 
-	public List<Question> getList(int type);
+	List<Question> getList(int type, int pageSize, int pageId);
 }

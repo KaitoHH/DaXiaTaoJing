@@ -1,8 +1,6 @@
 package database;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 /**
  * Project: DaXiaTaoJing
@@ -27,5 +25,22 @@ public class Util {
 			e.printStackTrace();
 		}
 		return conn;
+	}
+
+	public static ResultSet getResult(String sql) {
+		Connection connection = getConnection();
+		try {
+			Statement statement = connection.createStatement();
+			return statement.executeQuery(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 }

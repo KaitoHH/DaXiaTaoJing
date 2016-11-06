@@ -65,7 +65,7 @@
                         <div class="btn-toolbar" role="toolbar">
                             <div class="btn-group" data-toggle="buttons">
                                 <p class="bs-component">
-                                    <a href="#" class="btn btn-primary btn-xs active">点赞(135)</a>
+                                    <a href="#" class="btn btn-primary btn-xs active">点赞</a>
                                 </p>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                         <div class="btn-toolbar" role="toolbar">
                             <div class="btn-group" data-toggle="buttons">
                                 <p class="bs-component">
-                                    <a href="#" class="btn btn-primary btn-xs active">点赞(135)</a>
+                                    <a href="#" class="btn btn-primary btn-xs active">点赞</a>
                                 </p>
                             </div>
                         </div>
