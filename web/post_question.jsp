@@ -55,7 +55,7 @@
                                     <option value="1">文科</option>
                                     <option value="2">理科</option>
                                     <option value="3">工科</option>
-                                    <option value="4">思政</option>
+                                    <option value="4">其他</option>
                                 </select>
                             </div>
                         </div>

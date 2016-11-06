@@ -48,6 +48,10 @@
         <servlet-class>servlet.jsonQuery.ProfileAskListServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>ProfileAnswerListServlet</servlet-name>
+        <servlet-class>servlet.jsonQuery.ProfileAnswerListServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>IndexServlet</servlet-name>
         <servlet-class>servlet.IndexServlet</servlet-class>
     </servlet>
@@ -96,6 +100,10 @@
     <servlet-mapping>
         <servlet-name>ProfileAskListServlet</servlet-name>
         <url-pattern>/askList.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfileAnswerListServlet</servlet-name>
+        <url-pattern>/answerList.do</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>BrowseUserServlet</servlet-name>

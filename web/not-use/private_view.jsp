@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <head>
-    <%@include file="frameJsp/header.jsp" %>
+    <%@include file="../frameJsp/header.jsp" %>
     <title>大夏淘经</title>
     <style type="text/css">
         body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<%@include file="frameJsp/navbar.jsp" %>
+<%@include file="../frameJsp/navbar.jsp" %>
 
 
 <div class="container">
@@ -31,7 +31,7 @@
                         数字逻辑整体的结构是什么？<br/>
                         感觉学的很模糊。<br/>
                     </p>
-                    <p> <img alt="no pic" src="imgs/image-1.png"> </p>
+                    <p> <img alt="no pic" src="../imgs/image-1.png"> </p>
                 </div>
             </div>
             <div class="panel panel-default">
@@ -53,7 +53,7 @@
             </div>
         </div>
     </div>
-    <%@include file="frameJsp/footer.jsp" %>
+    <%@include file="../frameJsp/footer.jsp" %>
 
 </div>
 

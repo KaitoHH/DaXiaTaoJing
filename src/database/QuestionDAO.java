@@ -120,7 +120,7 @@ public class QuestionDAO implements IQuestionDAO {
 	}
 
 	public List<Question> getAskList(String userId, int pageSize, int pageId) {
-		String sql = "SELECT * FROM question WHERE userId = ? LIMIT " + pageId * pageSize + "," + pageSize;
+		String sql = "SELECT * FROM question WHERE userId = ? ORDER BY id DESC LIMIT " + pageId * pageSize + "," + pageSize;
 		return getUserList(sql, userId);
 	}
 
@@ -130,7 +130,7 @@ public class QuestionDAO implements IQuestionDAO {
 	}
 
 	public List<Question> getAnswerList(String userId, int pageSize, int pageId) {
-		String sql = "SELECT * FROM question JOIN answer ON question.id=answer.qid AND answer.userId=? LIMIT " + pageId * pageSize + "," + pageSize;
+		String sql = "SELECT * FROM question JOIN answer ON question.id=answer.qid AND answer.userId=? ORDER BY question.id DESC LIMIT " + pageId * pageSize + "," + pageSize;
 		return getUserList(sql, userId);
 	}
 
@@ -145,6 +145,7 @@ public class QuestionDAO implements IQuestionDAO {
 			question.setUserId(set.getString("userId"));
 			question.setPuserId(set.getString("puserid"));
 			question.setUserName(new UserDAO().select(question.getUserId()).getName());
+			question.setAnswerCnt(getAnswerCount(question.getId()));
 			if (!question.getPuserId().equals(""))
 				question.setPuserName(new UserDAO().select(question.getPuserId()).getName());
 			if (containTag)
@@ -200,6 +201,27 @@ public class QuestionDAO implements IQuestionDAO {
 			}
 		}
 		return count;
+	}
+
+	private int getAnswerCount(int qid) {
+		Connection connection = Util.getConnection();
+		String sql = "SELECT COUNT(id) FROM answer WHERE qId = ?";
+		try {
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(1, qid);
+			ResultSet set = statement.executeQuery();
+			set.next();
+			return set.getInt(1);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return 0;
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	public List<Question> getIndexList() {
