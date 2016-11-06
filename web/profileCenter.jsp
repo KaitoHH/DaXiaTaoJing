@@ -58,7 +58,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-10">
-                                            <a href="#"> {{askProblem.title}}</a><br>
+                                            <a href="/pq/{{askProblem.id}}"> {{askProblem.tittle}}</a><br>
                                             来自学科：<a href="#" class="alert-link">{{askProblem.subject}} </a>
                                             • {{askProblem.numberOfAnswers}}个回答 •
                                             {{askProblem.numberOfFollowers}}人关注 <a href="#"
@@ -94,9 +94,7 @@
                                 <ul class="list-unstyled">
                                     <li class="row" ng-repeat="answerProblem in answerProblems"
                                         style="margin-bottom: 10px">
-                                        <!-- <div>
-                                        <hr width="80%" color=#987cb9  ng-show="$index > 0">
-                                        </div> -->
+
                                         <div class="col-lg-2">
                                             <div class="bs-component">
                                                 <div class="well well-sm">
@@ -105,7 +103,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-10">
-                                            <a href="#"> {{answerProblem.title}}</a><br>
+                                            <a href="/pq/{{answerProblem.id}}"> {{answerProblem.tittle}}</a><br>
                                             来自学科：<a href="#" class="alert-link">{{answerProblem.subject}} </a>
                                             • {{answerProblem.numberOfAnswers}}个回答 •
                                             {{answerProblem.numberOfFollowers}}人关注 <a href="#"
@@ -120,14 +118,7 @@
                                     <button type="button" ng-disabled="!canLoadMore" class=" btn btn-primary"
                                             ng-click="loadPage()">更多
                                     </button>
-                                    <!--  <div class="col-lg-3">
-                                        <span class="zg-gray-normal">提问</span><br><br>
-                                    </div>
-                                    <div class="col-lg-6">
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <a ng-click="toggleShowALLAsks()"> {{ showALLAsks ? '缩小提问' : '全部提问→ '}}</a>
-                                    </div> -->
+
                                 </div>
                             </div>
                         </a>
@@ -138,14 +129,11 @@
                         <a name="agree">
                             <div ng-controller="AgreeProblemsController">
 
-                                <!-- <hr width="100%" color=#987cb9 SIZE=10 > -->
 
                                 <ul class="list-unstyled">
                                     <li class="row" ng-repeat="agreeProblem in agreeProblems"
                                         style="margin-bottom: 10px">
-                                        <!-- <div>
-                                        <hr width="80%" color=#987cb9  ng-show="$index > 0">
-                                        </div> -->
+
                                         <div class="col-lg-2">
                                             <div class="bs-component">
                                                 <div class="well well-sm">
@@ -154,7 +142,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-10">
-                                            <a href="#"> {{agreeProblem.title}}</a><br>
+                                            <a href="/pq/{{agreeProblem.id}}"> {{agreeProblem.tittle}}</a><br>
                                             来自学科：<a href="#" class="alert-link">{{agreeProblem.subject}} </a>
                                             • {{agreeProblem.numberOfagrees}}个回答 •
                                             {{agreeProblem.numberOfFollowers}}人关注 <a href="#"
@@ -169,14 +157,7 @@
                                     <button type="button" ng-disabled="!canLoadMore" class=" btn btn-primary"
                                             ng-click="loadPage()">更多
                                     </button>
-                                    <!--  <div class="col-lg-3">
-                                        <span class="zg-gray-normal">提问</span><br><br>
-                                    </div>
-                                    <div class="col-lg-6">
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <a ng-click="toggleShowALLAsks()"> {{ showALLAsks ? '缩小提问' : '全部提问→ '}}</a>
-                                    </div> -->
+
                                 </div>
                             </div>
                         </a>

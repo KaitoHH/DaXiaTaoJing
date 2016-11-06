@@ -3,98 +3,165 @@
 angular.module('daxiataojingApp')
     .controller('AskProblemsController', ['$scope', 'askProblemsFactory',function($scope,askProblemsFactory) {
         $scope.pageSize=2;
-        $scope.askProblems=askProblemsFactory.getFirstAskProblem();
-        $scope.begin=true;
         $scope.pageId=0;
-        $scope.askProblemsPages=askProblemsFactory.getPages($scope.pageSize);
-        $scope.askProblemsLength=askProblemsFactory.getLength();
-        $scope.canLoadMore= 1 < parseInt($scope.askProblemsLength);
+        $scope.canLoadMore=true;
+        $scope.askProblems=[];
+        askProblemsFactory.getPage($scope.pageSize,$scope.pageId)
+                .then(
+                    function(response) {
+                        var tmpdata=response.data.data;
+                        if(tmpdata.length > 0) {
+                            $scope.askProblems=tmpdata;
+                            $scope.canLoadMore=true;
+                        }
+                        else {
+                            $scope.canLoadMore=false;
+                        }
+                        $scope.pageId += 1;
+                    }
+                    ,
+                    function(response) {
+                        $scope.message = "Error: "+response.status + " " + response.statusText;
+                        console.log($scope.message);
+                    }
+                    );
+        
+    
         console.log(1 < parseInt($scope.askProblemsLength));
         
         $scope.loadPage=function() {
-            if ($scope.pageId < $scope.askProblemsPages) {
-                if ($scope.begin) {
-                    $scope.askProblems=askProblemsFactory.getPage($scope.pageSize,$scope.pageId);
-                    $scope.begin=false;
-                }
-                else {
-                    $scope.askProblems=$scope.askProblems.concat(askProblemsFactory.getPage($scope.pageSize,$scope.pageId));
-                }
-
-                $scope.pageId+=1;
-                if ($scope.pageId >= $scope.askProblemsPages) {
-                    $scope.canLoadMore=false;
-                }
+            if ($scope.canLoadMore) {
+                askProblemsFactory.getPage($scope.pageSize,$scope.pageId)
+                .then(
+                    function(response) {
+                        var tmpdata=response.data.data;
+                        if(tmpdata.length > 0) {
+                            $scope.askProblems=$scope.askProblems.concat(tmpdata);
+                            $scope.canLoadMore=true;
+                        }
+                        else {
+                            $scope.canLoadMore=false;
+                        }
+                        $scope.pageId += 1;
+                    }
+                    ,
+                    function(response) {
+                        $scope.message = "Error: "+response.status + " " + response.statusText;
+                        console.log($scope.message);
+                    }
+                    );
             }
-
-
         }
 
     }])
 
     .controller('AnswerProblemsController', ['$scope', 'answerProblemsFactory',function($scope,answerProblemsFactory) {
-        $scope.pageSize=2;
-        $scope.answerProblems=answerProblemsFactory.getFirstAnswerProblem();
-        $scope.begin=true;
-        $scope.pageId=0;
-        $scope.answerProblemsPages=answerProblemsFactory.getPages($scope.pageSize);
-        $scope.answerProblemsLength=answerProblemsFactory.getLength();
-        $scope.canLoadMore= 1 < parseInt($scope.answerProblemsLength);
-        console.log(1 < parseInt($scope.answerProblemsLength));
+            $scope.pageSize=2;
+            $scope.pageId=0;
+            $scope.canLoadMore=true;
+            $scope.answerProblems=[];
+            answerProblemsFactory.getPage($scope.pageSize,$scope.pageId)
+                    .then(
+                        function(response) {
+                            var tmpdata=response.data.data;
+                            if(tmpdata.length > 0) {
+                                $scope.answerProblems=tmpdata;
+                                $scope.canLoadMore=true;
+                            }
+                            else {
+                                $scope.canLoadMore=false;
+                            }
+                            $scope.pageId += 1;
+                        }
+                        ,
+                        function(response) {
+                            $scope.message = "Error: "+response.status + " " + response.statusText;
+                            console.log($scope.message);
+                        }
+                        );
+            
         
-        $scope.loadPage=function() {
-            if ($scope.pageId < $scope.answerProblemsPages) {
-                if ($scope.begin) {
-                    $scope.answerProblems=answerProblemsFactory.getPage($scope.pageSize,$scope.pageId);
-                    $scope.begin=false;
-                }
-                else {
-                    $scope.answerProblems=$scope.answerProblems.concat(answerProblemsFactory.getPage($scope.pageSize,$scope.pageId));
-                }
-
-                $scope.pageId+=1;
-                if ($scope.pageId >= $scope.answerProblemsPages) {
-                    $scope.canLoadMore=false;
+            console.log(1 < parseInt($scope.answerProblemsLength));
+            
+            $scope.loadPage=function() {
+                if ($scope.canLoadMore) {
+                    answerProblemsFactory.getPage($scope.pageSize,$scope.pageId)
+                    .then(
+                        function(response) {
+                            var tmpdata=response.data.data;
+                            if(tmpdata.length > 0) {
+                                $scope.answerProblems=$scope.answerProblems.concat(tmpdata);
+                                $scope.canLoadMore=true;
+                            }
+                            else {
+                                $scope.canLoadMore=false;
+                            }
+                            $scope.pageId += 1;
+                        }
+                        ,
+                        function(response) {
+                            $scope.message = "Error: "+response.status + " " + response.statusText;
+                            console.log($scope.message);
+                        }
+                        );
                 }
             }
 
 
-        }
-
     }])
-
-
-     .controller('AgreeProblemsController', ['$scope', 'agreeProblemsFactory',function($scope,agreeProblemsFactory) {
-        $scope.pageSize=2;
-        $scope.agreeProblems=agreeProblemsFactory.getFirstAgreeProblem();
-        $scope.begin=true;
-        $scope.pageId=0;
-        $scope.agreeProblemsPages=agreeProblemsFactory.getPages($scope.pageSize);
-        $scope.agreeProblemsLength=agreeProblemsFactory.getLength();
-        $scope.canLoadMore= 1 < parseInt($scope.agreeProblemsLength);
-        console.log(1 < parseInt($scope.agreeProblemsLength));
+    .controller('AgreeProblemsController', ['$scope', 'agreeProblemsFactory',function($scope,agreeProblemsFactory) {
+            $scope.pageSize=2;
+            $scope.pageId=0;
+            $scope.canLoadMore=true;
+            $scope.agreeProblems=[];
+            agreeProblemsFactory.getPage($scope.pageSize,$scope.pageId)
+                    .then(
+                        function(response) {
+                            var tmpdata=response.data.data;
+                            if(tmpdata.length > 0) {
+                                $scope.agreeProblems=tmpdata;
+                                $scope.canLoadMore=true;
+                            }
+                            else {
+                                $scope.canLoadMore=false;
+                            }
+                            $scope.pageId += 1;
+                        }
+                        ,
+                        function(response) {
+                            $scope.message = "Error: "+response.status + " " + response.statusText;
+                            console.log($scope.message);
+                        }
+                        );
+            
         
-        $scope.loadPage=function() {
-            if ($scope.pageId < $scope.agreeProblemsPages) {
-                if ($scope.begin) {
-                    $scope.agreeProblems=agreeProblemsFactory.getPage($scope.pageSize,$scope.pageId);
-                    $scope.begin=false;
-                }
-                else {
-                    $scope.agreeProblems=$scope.agreeProblems.concat(agreeProblemsFactory.getPage($scope.pageSize,$scope.pageId));
-                }
-
-                $scope.pageId+=1;
-                if ($scope.pageId >= $scope.agreeProblemsPages) {
-                    $scope.canLoadMore=false;
+            console.log(1 < parseInt($scope.agreeProblemsLength));
+            
+            $scope.loadPage=function() {
+                if ($scope.canLoadMore) {
+                    agreeProblemsFactory.getPage($scope.pageSize,$scope.pageId)
+                    .then(
+                        function(response) {
+                            var tmpdata=response.data.data;
+                            if(tmpdata.length > 0) {
+                                $scope.agreeProblems=$scope.agreeProblems.concat(tmpdata);
+                                $scope.canLoadMore=true;
+                            }
+                            else {
+                                $scope.canLoadMore=false;
+                            }
+                            $scope.pageId += 1;
+                        }
+                        ,
+                        function(response) {
+                            $scope.message = "Error: "+response.status + " " + response.statusText;
+                            console.log($scope.message);
+                        }
+                        );
                 }
             }
 
 
-        }
-
     }])
-
-
 
 ;
