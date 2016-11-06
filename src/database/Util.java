@@ -1,5 +1,8 @@
 package database;
 
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+
+import java.beans.PropertyVetoException;
 import java.sql.*;
 
 /**
@@ -10,8 +13,26 @@ import java.sql.*;
  * All rights reserved.
  */
 public class Util {
+	private static ComboPooledDataSource source;
+
+	static {
+		source = new ComboPooledDataSource();
+		try {
+			source.setDriverClass("com.mysql.jdbc.Driver"); //loads the jdbc driver
+			source.setJdbcUrl("jdbc:mysql://kaitohh.com:3306/daxiataojing?useSSL=false");
+			source.setUser("root");
+			source.setPassword("Dax1a");
+			source.setMinPoolSize(5);
+			source.setAcquireIncrement(5);
+			source.setMaxPoolSize(20);
+		} catch (PropertyVetoException e) {
+			e.printStackTrace();
+		}
+		System.out.println("init");
+	}
+
 	public static Connection getConnection() {
-		String driver = "com.mysql.jdbc.Driver";
+		/*String driver = "com.mysql.jdbc.Driver";
 		String url = "jdbc:mysql://kaitohh.com:3306/daxiataojing?useSSL=false";
 		String username = "root";
 		String password = "Dax1a";
@@ -24,7 +45,14 @@ public class Util {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return conn;
+		return conn;*/
+
+		try {
+			return source.getConnection();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 	public static ResultSet getResult(String sql) {
