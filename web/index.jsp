@@ -130,7 +130,7 @@
                                                 <c:forEach var="tag" items="${question.tag}">
                                                     <span class="label label-info">${tag}</span>
                                                 </c:forEach>
-                                                • 100个回答 • 56人关注
+                                                • ${question.answerCnt}个回答 • 0人关注
                                             </div>
                                         </div>
                                     </c:forEach>
@@ -159,7 +159,7 @@
                                                 <c:forEach var="tag" items="${question.tag}">
                                                     <span class="label label-info">${tag}</span>
                                                 </c:forEach>
-                                                • 100个回答 • 56人关注
+                                                • ${question.answerCnt}个回答 • 0人关注
                                             </div>
                                         </div>
                                     </c:forEach>
@@ -188,7 +188,7 @@
                                                 <c:forEach var="tag" items="${question.tag}">
                                                     <span class="label label-info">${tag}</span>
                                                 </c:forEach>
-                                                • 100个回答 • 56人关注
+                                                • ${question.answerCnt}个回答 • 0人关注
                                             </div>
                                         </div>
                                     </c:forEach>
@@ -217,7 +217,7 @@
                                                 <c:forEach var="tag" items="${question.tag}">
                                                     <span class="label label-info">${tag}</span>
                                                 </c:forEach>
-                                                • 100个回答 • 56人关注
+                                                • ${question.answerCnt}个回答 • 0人关注
                                             </div>
                                         </div>
                                     </c:forEach>
