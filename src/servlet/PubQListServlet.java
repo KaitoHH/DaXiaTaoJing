@@ -20,9 +20,17 @@ import java.util.List;
 public class PubQListServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		for (int i = 1; i <= 4; i++) {
-			req.getSession().setAttribute("qlist" + i, new QuestionDAO().getList(i, 5, 0));
+		String uri = req.getRequestURI();
+		if (uri.equals("/question")) {
+			for (int i = 1; i <= 4; i++) {
+				req.getSession().setAttribute("qlist" + i, new QuestionDAO().getList(i, 5, 0));
+			}
+			req.getRequestDispatcher("/pubList.jsp").forward(req, resp);
+		} else if (uri.equals("/pquestion")) {
+			req.getSession().setAttribute("qlist", new QuestionDAO().getPrivateList(5, 0));
+			req.getRequestDispatcher("/privateQuestion.jsp").forward(req,resp);
 		}
-		req.getRequestDispatcher("/pubList.jsp").forward(req, resp);
+
+
 	}
 }

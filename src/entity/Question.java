@@ -20,6 +20,9 @@ public class Question {
 	private int pay;
 	private String userId;
 	private String puserId;
+	private String userName;
+	private String puserName;
+	private int answerCnt;
 	private Set<String> tag = new HashSet();
 
 	public int getId() {
@@ -91,6 +94,30 @@ public class Question {
 
 	public void setPuserId(String puserId) {
 		this.puserId = puserId;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPuserName() {
+		return puserName;
+	}
+
+	public void setPuserName(String puserName) {
+		this.puserName = puserName;
+	}
+
+	public int getAnswerCnt() {
+		return answerCnt;
+	}
+
+	public void setAnswerCnt(int answerCnt) {
+		this.answerCnt = answerCnt;
 	}
 
 	public void validate() throws QuestionValidateException {

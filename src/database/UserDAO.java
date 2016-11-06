@@ -47,14 +47,15 @@ public class UserDAO implements IUserDAO {
 	@Override
 	public boolean update(User user) {
 		Connection connection = Util.getConnection();
-		String sql = "UPDATE user SET gender=?,email=?,introduction=?,long_intro=? WHERE id=?";
+		String sql = "UPDATE user SET gender=?,email=?,introduction=?,long_intro=?,point=? WHERE id=?";
 		try {
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(1, user.getGender());
 			statement.setString(2, user.getEmail());
 			statement.setString(3, user.getIntroduction());
 			statement.setString(4, user.getLongIntro());
-			statement.setString(5, user.getId());
+			statement.setInt(5, user.getPoint());
+			statement.setString(6, user.getId());
 			statement.executeUpdate();
 			statement.close();
 		} catch (SQLException e) {

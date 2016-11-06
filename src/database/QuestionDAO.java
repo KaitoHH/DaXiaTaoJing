@@ -68,13 +68,9 @@ public class QuestionDAO implements IQuestionDAO {
 			statement.setInt(1, id);
 			ResultSet set = statement.executeQuery();
 			if (set.next()) {
-				question = new Question();
-				question.setId(set.getInt("id"));
-				question.setTittle(set.getString("tittle"));
+				question = setBasic(set);
 				question.setqType(set.getInt("type"));
 				question.setContent(set.getString("content"));
-				question.setPay(set.getInt("pay"));
-				question.setUserId(set.getString("userId"));
 				question.setTag(new TagDAO().getAllTag(question.getId()));
 			}
 			statement.close();
@@ -118,6 +114,11 @@ public class QuestionDAO implements IQuestionDAO {
 		}
 	}
 
+	public List<Question> getPrivateList(int pageSize, int pageId) {
+		String sql = "SELECT * FROM question WHERE NOT puserId = ? ORDER BY id DESC LIMIT " + pageId * pageSize + "," + pageSize;
+		return getUserList(sql, "");
+	}
+
 	public List<Question> getAskList(String userId, int pageSize, int pageId) {
 		String sql = "SELECT * FROM question WHERE userId = ? LIMIT " + pageId * pageSize + "," + pageSize;
 		return getUserList(sql, userId);
@@ -141,7 +142,11 @@ public class QuestionDAO implements IQuestionDAO {
 			//question.setqType(set.getInt("type"));
 			//question.setContent(set.getString("content"));
 			question.setPay(set.getInt("pay"));
-			//question.setUserId(set.getString("userId"));
+			question.setUserId(set.getString("userId"));
+			question.setPuserId(set.getString("puserid"));
+			question.setUserName(new UserDAO().select(question.getUserId()).getName());
+			if (!question.getPuserId().equals(""))
+				question.setPuserName(new UserDAO().select(question.getPuserId()).getName());
 			if (containTag)
 				question.setTag(new TagDAO().getAllTag(question.getId()));
 		} catch (SQLException e) {

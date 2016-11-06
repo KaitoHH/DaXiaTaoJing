@@ -32,9 +32,9 @@
                         <a href="#answers" aria-controls="answers" role="tab" data-toggle="tab">回答</a>
                     </li>
                     <li role="presentation">
-                        <a href="#agrees" aria-controls="agrees" role="tab" data-toggle="tab">赞同</a>
+                        <a href="#agrees" aria-controls="agrees" role="tab" data-toggle="tab">关注</a>
                     </li>
-                    <li role="presentation">
+                    <li role="presentation" class="hidden">
                         <a href="#marks" aria-controls="marks" role="tab" data-toggle="tab">关注</a>
                     </li>
                 </ul>
@@ -61,10 +61,8 @@
                                             <a href="/pq/{{askProblem.id}}"> {{askProblem.tittle}}</a><br>
                                             来自学科：<a href="#" class="alert-link">{{askProblem.subject}} </a>
                                             • {{askProblem.numberOfAnswers}}个回答 •
-                                            {{askProblem.numberOfFollowers}}人关注 <a href="#"
-                                                                                   class="alert-link">取消关注</a>
-                                            <div>
-                                            </div>
+                                            {{askProblem.numberOfFollowers}}人关注
+                                            <%--<a href="#" class="alert-link">取消关注</a>--%>
                                         </div>
                                     </li>
                                 </ul>
@@ -106,10 +104,8 @@
                                             <a href="/pq/{{answerProblem.id}}"> {{answerProblem.tittle}}</a><br>
                                             来自学科：<a href="#" class="alert-link">{{answerProblem.subject}} </a>
                                             • {{answerProblem.numberOfAnswers}}个回答 •
-                                            {{answerProblem.numberOfFollowers}}人关注 <a href="#"
-                                                                                      class="alert-link">取消关注</a>
-                                            <div>
-                                            </div>
+                                            {{answerProblem.numberOfFollowers}}人关注
+                                            <%--<a href="#" class="alert-link">取消关注</a>--%>
                                         </div>
                                     </li>
                                 </ul>
@@ -144,11 +140,9 @@
                                         <div class="col-lg-10">
                                             <a href="/pq/{{agreeProblem.id}}"> {{agreeProblem.tittle}}</a><br>
                                             来自学科：<a href="#" class="alert-link">{{agreeProblem.subject}} </a>
-                                            • {{agreeProblem.numberOfagrees}}个回答 •
-                                            {{agreeProblem.numberOfFollowers}}人关注 <a href="#"
-                                                                                     class="alert-link">取消关注</a>
-                                            <div>
-                                            </div>
+                                            • {{agreeProblem.numberOfAnswers}}个回答 •
+                                            {{agreeProblem.numberOfFollowers}}人关注
+                                            <%--<a href="#" class="alert-link">取消关注</a>--%>
                                         </div>
                                     </li>
                                 </ul>
@@ -163,7 +157,7 @@
                         </a>
                     </div>
 
-                    <div role="tabpanel" class="tab-pane fade in" id="marks">
+                    <div role="tabpanel" class="tab-pane fade in hidden" id="marks">
                         <a name="collection">
                             <div class="panel panel-default">
                                 <div class="panel-body">

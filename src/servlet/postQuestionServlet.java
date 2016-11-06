@@ -26,14 +26,21 @@ public class postQuestionServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Question question = new Question();
+		User user = (User) req.getSession().getAttribute("user");
 		String msg = "0";
 		question.setTittle(req.getParameter("tittle"));
 		question.setqType(Integer.valueOf(req.getParameter("type")));
 		question.setContent(req.getParameter("content"));
-		question.setUserId(((User) req.getSession().getAttribute("user")).getId());
+		question.setUserId(user.getId());
 		question.setPuserId(req.getParameter("puserId"));
 		try {
-			question.setPay(Integer.valueOf(req.getParameter("pay")));
+			int pay = Integer.valueOf(req.getParameter("pay"));
+			question.setPay(pay);
+			if (pay > user.getPoint()) {
+				msg = "你的积分不足！（你的积分: " + user.getPoint() + "）";
+			} else {
+				user.setPoint(user.getPoint() - pay);
+			}
 		} catch (NumberFormatException e) {
 			msg = "悬赏金额输入错误！";
 		}
@@ -55,6 +62,8 @@ public class postQuestionServlet extends HttpServlet {
 		int qid = 0;
 		if (msg.equals("0")) {
 			qid = new QuestionDAO().insert(question);
+			new UserDAO().update(user);
+			req.getSession().setAttribute("user", user);
 		}
 		resp.setCharacterEncoding("utf-8");
 		resp.setContentType("application/json");

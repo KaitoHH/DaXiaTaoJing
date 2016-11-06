@@ -83,6 +83,7 @@
     <servlet-mapping>
         <servlet-name>PubQListServlet</servlet-name>
         <url-pattern>/question</url-pattern>
+        <url-pattern>/pquestion</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>PublicQuestionServlet</servlet-name>

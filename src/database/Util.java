@@ -28,7 +28,6 @@ public class Util {
 		} catch (PropertyVetoException e) {
 			e.printStackTrace();
 		}
-		System.out.println("init");
 	}
 
 	public static Connection getConnection() {

@@ -1,6 +1,7 @@
 package servlet;
 
 import database.AnswerDAO;
+import database.UserDAO;
 import entity.Answer;
 import entity.Question;
 import entity.User;
@@ -22,16 +23,24 @@ import java.io.PrintWriter;
 public class AnswerServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		User user = (User) req.getSession().getAttribute("user");
+		Question question = (Question) req.getSession().getAttribute("question");
 		Answer answer = new Answer();
-		answer.setQid(((Question) req.getSession().getAttribute("question")).getId());
-		answer.setUserId(((User) req.getSession().getAttribute("user")).getId());
+		answer.setQid(question.getId());
+		answer.setUserId(user.getId());
 		answer.setContent(req.getParameter("answerArea"));
-		answer.setAnonymous(req.getParameter("anonymous").equals("1") ? 1 : 0);
+		try {
+			answer.setAnonymous(req.getParameter("anonymous").equals("1") ? 1 : 0);
+		} catch (Exception e) {
+			user.setPoint(user.getPoint() + question.getPay());
+		}
 		String msg = "0";
 		if (answer.getContent() == "") {
 			msg = "error";
 		} else {
 			new AnswerDAO().insert(answer);
+			new UserDAO().update(user);
+			req.getSession().setAttribute("user", user);
 		}
 		PrintWriter out = resp.getWriter();
 		out.print(msg);

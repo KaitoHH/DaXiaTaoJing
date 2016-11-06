@@ -32,7 +32,11 @@ public class PublicQuestionServlet extends HttpServlet {
 		if (qid != 0 && question != null) {
 			req.getSession().setAttribute("question", question);
 			req.getSession().setAttribute("answers", new AnswerDAO().getList(qid));
-			req.getRequestDispatcher("/question.jsp").forward(req, resp);
+			if (question.getPuserId().equals("")) {
+				req.getRequestDispatcher("/question.jsp").forward(req, resp);
+			} else {
+				req.getRequestDispatcher("/private_peek.jsp").forward(req, resp);
+			}
 		}
 	}
 }
