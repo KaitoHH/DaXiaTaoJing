@@ -26,7 +26,9 @@ public class LoginRequiredFilter implements Filter {
 		HttpServletResponse response = (HttpServletResponse) servletResponse;
 		User loginService = (User) request.getSession().getAttribute("user");
 		if (loginService == null) {
-			response.sendRedirect("/");
+			request.getSession().setAttribute("errorMsg", "请先登录!");
+			request.getSession().setAttribute("referUri", request.getHeader("referer"));
+			response.sendRedirect("/error");
 		} else {
 			filterChain.doFilter(servletRequest, servletResponse);
 		}

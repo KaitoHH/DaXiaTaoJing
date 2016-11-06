@@ -52,7 +52,7 @@
                             <br/>
                             <p>
                                 <i> 提问者邀请了 <a href="/profile/${question.puserId}">${question.puserName}</a> 回答这个问题。 </i>
-                                <a href="/pq/${question.id}" class="btn btn_link"> >>偷看（花费积分${question.pay} 当前免费） </a>
+                                <a href="/rq/${question.id}" class="btn btn_link"> >>偷看（花费积分${question.pay} 当前免费） </a>
                             </p>
                         </li>
                     </c:forEach>

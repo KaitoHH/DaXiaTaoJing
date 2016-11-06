@@ -21,6 +21,7 @@ public class PublicQuestionServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String url = req.getRequestURI();
+		String prefix = url.substring(0, 3);
 		url = url.substring(4);
 		int qid = 0;
 		Question question = null;
@@ -34,7 +35,7 @@ public class PublicQuestionServlet extends HttpServlet {
 			req.getSession().setAttribute("answers", new AnswerDAO().getList(qid));
 			if (question.getPuserId().equals("")) {
 				req.getRequestDispatcher("/question.jsp").forward(req, resp);
-			} else {
+			} else if (prefix.equals("/rq")) {
 				req.getRequestDispatcher("/private_peek.jsp").forward(req, resp);
 			}
 		}

@@ -7,7 +7,7 @@ $(document).ready(function () {
             } else {
                 $("#successDiv").removeClass("hidden");
                 $("#responseDiv").addClass("hidden");
-                setTimeout("location.href='/pq/" + data.id + "'", 3000);
+                setTimeout("location.href='/rq/" + data.id + "'", 3000);
             }
         }
     };
