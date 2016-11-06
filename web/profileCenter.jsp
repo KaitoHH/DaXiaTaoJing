@@ -105,7 +105,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-10">
-                                            <a href="#"> {{answerProblem.title}}</a><br>
+                                            <a href="#"> {{answerProblem.tittle}}</a><br>
                                             来自学科：<a href="#" class="alert-link">{{answerProblem.subject}} </a>
                                             • {{answerProblem.numberOfAnswers}}个回答 •
                                             {{answerProblem.numberOfFollowers}}人关注 <a href="#"
@@ -154,7 +154,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-10">
-                                            <a href="#"> {{agreeProblem.title}}</a><br>
+                                            <a href="#"> {{agreeProblem.tittle}}</a><br>
                                             来自学科：<a href="#" class="alert-link">{{agreeProblem.subject}} </a>
                                             • {{agreeProblem.numberOfagrees}}个回答 •
                                             {{agreeProblem.numberOfFollowers}}人关注 <a href="#"
