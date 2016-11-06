@@ -1,7 +1,43 @@
 'use strict';
 
 angular.module('daxiataojingApp')
-    .factory('askProblemsFactory', function(){
+    .constant("baseURL","http://localhost:8080/")
+    .service('askProblemsFactory', ['$http', 'baseURL','$q', function($http,baseURL,$q) {
+
+        this.getPage=function(pageSize,pageId,callback) {
+            console.log(baseURL + "askList.do?" + "pageSize=" + pageSize
+                +"&"+"pageId="+pageId);
+            console.log($http.get(baseURL + "askList.do?" + "pageSize=" + pageSize
+                +"&"+"pageId="+pageId));
+            return $http.get(baseURL + "askList.do?" + "pageSize=" + pageSize
+                +"&"+"pageId="+pageId);
+        }
+        
+       /* this.getPage=function(pageSize,pageId) {
+            var defferer = $q.defer();
+
+           $http.get(baseURL + "askList.do?" + "pageSize=" + pageSize
+                +"&"+"pageId="+pageId).success(function (data){
+             defferer.resolve(data);
+           });
+
+          return defferer.promise;
+        }
+
+        this.getLength=function() {
+            var defferer = $q.defer();
+
+           $http.get(baseURL + "askList.do?" + "pageSize=" + 1
+                +"&"+"pageId="+0).success(function (data){
+             defferer.resolve(data);
+           });
+
+          return defferer.promise;
+        }
+        */
+
+    }])
+    /*.factory('askProblemsFactory', function(){
         var askProblemsAskFac={};
         var askProblems=[
             {
@@ -65,7 +101,7 @@ angular.module('daxiataojingApp')
 
        
         return askProblemsAskFac;
-    })
+    })*/
 
     .factory('answerProblemsFactory', function(){
         var answerProblemsFac={};

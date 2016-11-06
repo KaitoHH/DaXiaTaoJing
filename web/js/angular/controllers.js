@@ -3,31 +3,83 @@
 angular.module('daxiataojingApp')
     .controller('AskProblemsController', ['$scope', 'askProblemsFactory',function($scope,askProblemsFactory) {
         $scope.pageSize=2;
-        $scope.askProblems=askProblemsFactory.getFirstAskProblem();
-        $scope.begin=true;
         $scope.pageId=0;
-        $scope.askProblemsPages=askProblemsFactory.getPages($scope.pageSize);
-        $scope.askProblemsLength=askProblemsFactory.getLength();
-        $scope.canLoadMore= 1 < parseInt($scope.askProblemsLength);
+        $scope.canLoadMore=true;
+        $scope.askProblems=[];
+        /*$scope.askProblemsLength=0;*/
+        /*not consider null of askProblemsFactory*/
+        /*$scope.askProblems=askProblemsFactory.getPage($scope.pageSize,0).slice(0,1);*/
+        /*$scope.begin=true;*/
+        
+        
+        
+        
+        // askProblemsFactory.getPage($scope.pageSize,0,function(response){
+        //     $scope.askProblems=response;
+        // });
+        askProblemsFactory.getPage($scope.pageSize,$scope.pageId)
+                .then(
+                    function(response) {
+                        var tmpdata=response.data.data;
+                        if(tmpdata.length > 0) {
+                            $scope.askProblems=tmpdata;
+                            $scope.canLoadMore=true;
+                        }
+                        else {
+                            $scope.canLoadMore=false;
+                        }
+                        $scope.pageId += 1;
+                    }
+                    ,
+                    function(response) {
+                        $scope.message = "Error: "+response.status + " " + response.statusText;
+                        console.log($scope.message);
+                    }
+                    );
+        
+        
+        /*askProblemsFactory.getLength(function(response){
+            $scope.askProblemsLength=response;
+        });*/
+
+        /*askProblemsFactory.getLength()
+        .then(
+                function(response) {
+                    $scope.askProblemsLength=response.data.length;
+                }
+                ,
+                function(response) {
+                    $scope.message = "Error: "+response.status + " " + response.statusText;
+                    console.log($scope.message);
+                }
+            );*/
+
+        /*$scope.askProblemsPages=($scope.askProblemsLength + $scope.pageSize - 1) / $scope.pageSize;
+        $scope.canLoadMore= 1 < parseInt($scope.askProblemsLength);*/
         console.log(1 < parseInt($scope.askProblemsLength));
         
         $scope.loadPage=function() {
-            if ($scope.pageId < $scope.askProblemsPages) {
-                if ($scope.begin) {
-                    $scope.askProblems=askProblemsFactory.getPage($scope.pageSize,$scope.pageId);
-                    $scope.begin=false;
-                }
-                else {
-                    $scope.askProblems=$scope.askProblems.concat(askProblemsFactory.getPage($scope.pageSize,$scope.pageId));
-                }
-
-                $scope.pageId+=1;
-                if ($scope.pageId >= $scope.askProblemsPages) {
-                    $scope.canLoadMore=false;
-                }
+            if ($scope.canLoadMore) {
+                askProblemsFactory.getPage($scope.pageSize,$scope.pageId)
+                .then(
+                    function(response) {
+                        var tmpdata=response.data.data;
+                        if(tmpdata.length > 0) {
+                            $scope.askProblems=$scope.askProblems.concat(tmpdata);
+                            $scope.canLoadMore=true;
+                        }
+                        else {
+                            $scope.canLoadMore=false;
+                        }
+                        $scope.pageId += 1;
+                    }
+                    ,
+                    function(response) {
+                        $scope.message = "Error: "+response.status + " " + response.statusText;
+                        console.log($scope.message);
+                    }
+                    );
             }
-
-
         }
 
     }])
@@ -57,9 +109,8 @@ angular.module('daxiataojingApp')
                     $scope.canLoadMore=false;
                 }
             }
+        };
 
-
-        }
 
     }])
 

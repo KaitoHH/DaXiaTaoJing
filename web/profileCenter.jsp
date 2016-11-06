@@ -58,7 +58,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-10">
-                                            <a href="#"> {{askProblem.title}}</a><br>
+                                            <a href="#"> {{askProblem.tittle}}</a><br>
                                             来自学科：<a href="#" class="alert-link">{{askProblem.subject}} </a>
                                             • {{askProblem.numberOfAnswers}}个回答 •
                                             {{askProblem.numberOfFollowers}}人关注 <a href="#"
