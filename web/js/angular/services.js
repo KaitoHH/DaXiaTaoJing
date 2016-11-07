@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('daxiataojingApp')
-    .constant("baseURL", "http://localhost:8080/")
+    .constant("baseURL", "http://kaitohh.com:" + window.location.port + "/")
     .service('askProblemsFactory', ['$http', 'baseURL', '$q', function ($http, baseURL, $q) {
 
         this.getPage = function (pageSize, pageId, callback) {

@@ -226,8 +226,9 @@ public class QuestionDAO implements IQuestionDAO {
 
 	public List<Question> getIndexList() {
 		String sql = "SELECT * FROM question a\n" +
-				"WHERE (select COUNT(*) from question b where a.type=b.type and a.id<b.id) <=1 AND a.type >=1 AND a.puserId = ? \n" +
-				"ORDER BY type, id DESC";
+				"WHERE (select COUNT(*) from question b where a.type=b.type and a.id<b.id and a.puserId=\"\" and b.puserId=\"\") <=1 " +
+				"and a.puserId=?\n" +
+				"ORDER BY type, id DESC;";
 		return getUserList(sql, "");
 	}
 }
